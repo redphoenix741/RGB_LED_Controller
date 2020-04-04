@@ -1,21 +1,26 @@
 /**
-  Generated Main Source File
+  Generated Pin Manager File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    main.c
+    pin_manager.c
 
   Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+    This is the Pin Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+    This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.80.0
         Device            :  PIC16F15356
-        Driver Version    :  2.00
+        Driver Version    :  2.11
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 2.10 and above
+        MPLAB             :  MPLAB X 5.30
+
+    Copyright (c) 2013 - 2015 released Microchip Technology Inc.  All rights reserved.
 */
 
 /*
@@ -41,42 +46,78 @@
     SOFTWARE.
 */
 
-#include "mcc_generated_files/mcc.h"
+#include "pin_manager.h"
 
-/*
-                         Main application
- */
 
-char colorHex[10];
 
-void main(void)
+
+
+void PIN_MANAGER_Initialize(void)
 {
-    // initialize the device
-    SYSTEM_Initialize();
+    /**
+    LATx registers
+    */
+    LATA = 0x00;
+    LATB = 0x00;
+    LATC = 0x47;
+
+    /**
+    TRISx registers
+    */
+    TRISA = 0xFF;
+    TRISB = 0xFF;
+    TRISC = 0xBF;
+
+    /**
+    ANSELx registers
+    */
+    ANSELC = 0x38;
+    ANSELB = 0xFF;
+    ANSELA = 0xFF;
+
+    /**
+    WPUx registers
+    */
+    WPUE = 0x00;
+    WPUB = 0x00;
+    WPUA = 0x00;
+    WPUC = 0x00;
+
+    /**
+    ODx registers
+    */
+    ODCONA = 0x00;
+    ODCONB = 0x00;
+    ODCONC = 0x07;
+
+    /**
+    SLRCONx registers
+    */
+    SLRCONA = 0xFF;
+    SLRCONB = 0xFF;
+    SLRCONC = 0xFF;
+
+    /**
+    INLVLx registers
+    */
+    INLVLA = 0xFF;
+    INLVLB = 0xFF;
+    INLVLC = 0xFF;
+    INLVLE = 0x08;
+
+
+
+
+
+   
     
-    
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-
-    while (1)
-    {
-        printf("Hello World!\r\n Enter color in Hex: ");
-        scanf("%s", &colorHex);
-        __delay_ms(150);
-        // Add your application code
-    }
+	
+    RC6PPS = 0x0F;   //RC6->EUSART1:TX1;    
+    RX1DTPPS = 0x17;   //RC7->EUSART1:RX1;    
+}
+  
+void PIN_MANAGER_IOC(void)
+{   
 }
 
 /**

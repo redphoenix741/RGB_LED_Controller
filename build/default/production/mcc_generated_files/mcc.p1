@@ -1,56 +1,67 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"13 config.c
-[p x FEXTOSC = OFF ]
-"14
-[p x RSTOSC = HFINT32 ]
-"15
-[p x CLKOUTEN = OFF ]
-"16
-[p x CSWEN = OFF ]
-"17
-[p x FCMEN = OFF ]
-"20
-[p x MCLRE = ON ]
-"21
-[p x PWRTE = OFF ]
-"22
-[p x LPBOREN = OFF ]
-"23
-[p x BOREN = OFF ]
-"24
-[p x BORV = LO ]
-"25
-[p x ZCD = OFF ]
-"26
-[p x PPS1WAY = OFF ]
-"27
-[p x STVREN = OFF ]
-"30
-[p x WDTCPS = WDTCPS_31 ]
-"31
-[p x WDTE = OFF ]
-"32
-[p x WDTCWS = WDTCWS_7 ]
-"33
-[p x WDTCCS = SC ]
-"36
-[p x BBSIZE = BB512 ]
-"37
-[p x BBEN = OFF ]
-"38
-[p x SAFEN = OFF ]
-"39
-[p x WRTAPP = OFF ]
-"40
-[p x WRTB = OFF ]
-"41
-[p x WRTC = OFF ]
-"42
-[p x WRTSAF = OFF ]
-"43
-[p x LVP = ON ]
-"46
-[p x CP = OFF ]
+"100 mcc_generated_files/mcc.h
+[; ;mcc_generated_files/mcc.h: 100: void PMD_Initialize(void);
+[v _PMD_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 102: void PIN_MANAGER_Initialize (void);
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
+"87 mcc_generated_files/mcc.h
+[; ;mcc_generated_files/mcc.h: 87: void OSCILLATOR_Initialize(void);
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pwm4.h
+[; ;mcc_generated_files/pwm4.h: 102:  void PWM4_Initialize(void);
+[v _PWM4_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pwm3.h
+[; ;mcc_generated_files/pwm3.h: 102:  void PWM3_Initialize(void);
+[v _PWM3_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pwm5.h
+[; ;mcc_generated_files/pwm5.h: 102:  void PWM5_Initialize(void);
+[v _PWM5_Initialize `(v ~T0 @X0 0 ef ]
+"321 mcc_generated_files/tmr2.h
+[; ;mcc_generated_files/tmr2.h: 321: void TMR2_Initialize(void);
+[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
+"111 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 111: void EUSART1_Initialize(void);
+[v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
+"10951 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 10951: extern volatile unsigned char OSCCON1 __attribute__((address(0x88D)));
+[v _OSCCON1 `Vuc ~T0 @X0 0 e@2189 ]
+"11091
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 11091: extern volatile unsigned char OSCCON3 __attribute__((address(0x88F)));
+[v _OSCCON3 `Vuc ~T0 @X0 0 e@2191 ]
+"11188
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 11188: extern volatile unsigned char OSCEN __attribute__((address(0x891)));
+[v _OSCEN `Vuc ~T0 @X0 0 e@2193 ]
+"11297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 11297: extern volatile unsigned char OSCFRQ __attribute__((address(0x893)));
+[v _OSCFRQ `Vuc ~T0 @X0 0 e@2195 ]
+"11131
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 11131: extern volatile unsigned char OSCSTAT __attribute__((address(0x890)));
+[v _OSCSTAT `Vuc ~T0 @X0 0 e@2192 ]
+"11239
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 11239: extern volatile unsigned char OSCTUNE __attribute__((address(0x892)));
+[v _OSCTUNE `Vuc ~T0 @X0 0 e@2194 ]
+"24364
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 24364: extern volatile __bit PLLR __attribute__((address(0x4480)));
+[v _PLLR `Vb ~T0 @X0 0 e@17536 ]
+"9656
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9656: extern volatile unsigned char PMD0 __attribute__((address(0x796)));
+[v _PMD0 `Vuc ~T0 @X0 0 e@1942 ]
+"9701
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9701: extern volatile unsigned char PMD1 __attribute__((address(0x797)));
+[v _PMD1 `Vuc ~T0 @X0 0 e@1943 ]
+"9749
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9749: extern volatile unsigned char PMD2 __attribute__((address(0x798)));
+[v _PMD2 `Vuc ~T0 @X0 0 e@1944 ]
+"9794
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9794: extern volatile unsigned char PMD3 __attribute__((address(0x799)));
+[v _PMD3 `Vuc ~T0 @X0 0 e@1945 ]
+"9844
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9844: extern volatile unsigned char PMD4 __attribute__((address(0x79A)));
+[v _PMD4 `Vuc ~T0 @X0 0 e@1946 ]
+"9889
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9889: extern volatile unsigned char PMD5 __attribute__((address(0x79B)));
+[v _PMD5 `Vuc ~T0 @X0 0 e@1947 ]
 "110 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1089,3 +1100,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21398
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 21398: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
+"50 mcc_generated_files/mcc.c
+[; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
+[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
+"51
+[; ;mcc_generated_files/mcc.c: 51: {
+{
+[e :U _SYSTEM_Initialize ]
+[f ]
+"52
+[; ;mcc_generated_files/mcc.c: 52:     PMD_Initialize();
+[e ( _PMD_Initialize ..  ]
+"53
+[; ;mcc_generated_files/mcc.c: 53:     PIN_MANAGER_Initialize();
+[e ( _PIN_MANAGER_Initialize ..  ]
+"54
+[; ;mcc_generated_files/mcc.c: 54:     OSCILLATOR_Initialize();
+[e ( _OSCILLATOR_Initialize ..  ]
+"55
+[; ;mcc_generated_files/mcc.c: 55:     PWM4_Initialize();
+[e ( _PWM4_Initialize ..  ]
+"56
+[; ;mcc_generated_files/mcc.c: 56:     PWM3_Initialize();
+[e ( _PWM3_Initialize ..  ]
+"57
+[; ;mcc_generated_files/mcc.c: 57:     PWM5_Initialize();
+[e ( _PWM5_Initialize ..  ]
+"58
+[; ;mcc_generated_files/mcc.c: 58:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
+"59
+[; ;mcc_generated_files/mcc.c: 59:     EUSART1_Initialize();
+[e ( _EUSART1_Initialize ..  ]
+"60
+[; ;mcc_generated_files/mcc.c: 60: }
+[e :UE 984 ]
+}
+"62
+[; ;mcc_generated_files/mcc.c: 62: void OSCILLATOR_Initialize(void)
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+"63
+[; ;mcc_generated_files/mcc.c: 63: {
+{
+[e :U _OSCILLATOR_Initialize ]
+[f ]
+"65
+[; ;mcc_generated_files/mcc.c: 65:     OSCCON1 = 0x10;
+[e = _OSCCON1 -> -> 16 `i `uc ]
+"67
+[; ;mcc_generated_files/mcc.c: 67:     OSCCON3 = 0x00;
+[e = _OSCCON3 -> -> 0 `i `uc ]
+"69
+[; ;mcc_generated_files/mcc.c: 69:     OSCEN = 0x00;
+[e = _OSCEN -> -> 0 `i `uc ]
+"71
+[; ;mcc_generated_files/mcc.c: 71:     OSCFRQ = 0x05;
+[e = _OSCFRQ -> -> 5 `i `uc ]
+"73
+[; ;mcc_generated_files/mcc.c: 73:     OSCSTAT = 0x00;
+[e = _OSCSTAT -> -> 0 `i `uc ]
+"75
+[; ;mcc_generated_files/mcc.c: 75:     OSCTUNE = 0x00;
+[e = _OSCTUNE -> -> 0 `i `uc ]
+"77
+[; ;mcc_generated_files/mcc.c: 77:     while(PLLR == 0)
+[e $U 986  ]
+[e :U 987 ]
+"78
+[; ;mcc_generated_files/mcc.c: 78:     {
+{
+"79
+[; ;mcc_generated_files/mcc.c: 79:     }
+}
+[e :U 986 ]
+"77
+[; ;mcc_generated_files/mcc.c: 77:     while(PLLR == 0)
+[e $ == -> _PLLR `i -> 0 `i 987  ]
+[e :U 988 ]
+"80
+[; ;mcc_generated_files/mcc.c: 80: }
+[e :UE 985 ]
+}
+"82
+[; ;mcc_generated_files/mcc.c: 82: void PMD_Initialize(void)
+[v _PMD_Initialize `(v ~T0 @X0 1 ef ]
+"83
+[; ;mcc_generated_files/mcc.c: 83: {
+{
+[e :U _PMD_Initialize ]
+[f ]
+"85
+[; ;mcc_generated_files/mcc.c: 85:     PMD0 = 0x00;
+[e = _PMD0 -> -> 0 `i `uc ]
+"87
+[; ;mcc_generated_files/mcc.c: 87:     PMD1 = 0x00;
+[e = _PMD1 -> -> 0 `i `uc ]
+"89
+[; ;mcc_generated_files/mcc.c: 89:     PMD2 = 0x00;
+[e = _PMD2 -> -> 0 `i `uc ]
+"91
+[; ;mcc_generated_files/mcc.c: 91:     PMD3 = 0x00;
+[e = _PMD3 -> -> 0 `i `uc ]
+"93
+[; ;mcc_generated_files/mcc.c: 93:     PMD4 = 0x00;
+[e = _PMD4 -> -> 0 `i `uc ]
+"95
+[; ;mcc_generated_files/mcc.c: 95:     PMD5 = 0x00;
+[e = _PMD5 -> -> 0 `i `uc ]
+"96
+[; ;mcc_generated_files/mcc.c: 96: }
+[e :UE 989 ]
+}

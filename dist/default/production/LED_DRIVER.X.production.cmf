@@ -12,9 +12,32 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\LED_DRIVER.X.production.o
-cinit CODE 0 7FD 7FD 3 2
-maintext CODE 0 7EF 7EF E 2
-$C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
+cinit CODE 0 7F5 7F5 B 2
+text1 CODE 0 67D 67D 12 2
+text2 CODE 0 6E6 6E6 28 2
+text3 CODE 0 77B 77B 7A 2
+text4 CODE 0 73C 73C 3F 2
+text5 CODE 0 63D 63D 6 2
+text6 CODE 0 658 658 A 2
+text7 CODE 0 68F 68F 19 2
+text8 CODE 0 662 662 D 2
+text9 CODE 0 626 626 5 2
+text10 CODE 0 621 621 5 2
+text11 CODE 0 649 649 7 2
+text12 CODE 0 650 650 8 2
+text13 CODE 0 70E 70E 2E 2
+text14 CODE 0 66F 66F E 2
+text15 CODE 0 6C3 6C3 23 2
+text16 CODE 0 637 637 6 2
+text17 CODE 0 631 631 6 2
+text18 CODE 0 62B 62B 6 2
+maintext CODE 0 6A8 6A8 1B 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 51 51 14 1
+stringtext1 STRCODE 0 800 800 F 2
+bssBANK0 BANK0 1 20 20 31 1
+clrtext CODE 0 643 643 6 2
+$C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 5 2
@@ -24,7 +47,7 @@ config CONFIG 0 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 20-6F 1
+RAM 65-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -50,7 +73,7 @@ RAM B20-B6F 1
 RAM BA0-BEF 1
 RAM C20-C6F 1
 RAM CA0-CBF 1
-BANK0 20-6F 1
+BANK0 65-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -60,10 +83,10 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-7EE 2
-CONST 800-3FFF 2
-ENTRY 4-7EE 2
-ENTRY 800-3FFF 2
+CONST 4-620 2
+CONST 80F-3FFF 2
+ENTRY 4-620 2
+ENTRY 80F-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -119,9 +142,9 @@ SFR60 1E00-1E6F 1
 SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
-STACK 2000-27EF 1
-CODE 4-7EE 2
-CODE 800-3FFF 2
+STACK 2045-27EF 1
+CODE 4-620 2
+CODE 80F-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -149,11 +172,10 @@ BANK23 BA0-BEF 1
 BANK24 C20-C6F 1
 BANK25 CA0-CBF 1
 BIGRAM 2000-27EF 1
-COMMON 70-7D 1
-STRCODE 4-7EE 2
-STRCODE 800-3FFF 2
-STRING 4-7EE 2
-STRING 800-3FFF 2
+STRCODE 4-620 2
+STRCODE 80F-3FFF 2
+STRING 4-620 2
+STRING 80F-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -168,22 +190,169 @@ STRING 800-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LED_DRIVER.X.production.o
-7FD cinit CODE >1544:C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.s
-7FD cinit CODE >1547:C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.s
-7FD cinit CODE >1553:C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.s
-7FD cinit CODE >1555:C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.s
-7FE cinit CODE >1556:C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.s
-7EF maintext CODE >20:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7EF maintext CODE >23:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7F1 maintext CODE >24:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7F2 maintext CODE >25:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7F3 maintext CODE >27:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7F5 maintext CODE >28:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7F7 maintext CODE >30:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7F8 maintext CODE >31:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7F9 maintext CODE >32:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7FA maintext CODE >34:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
-7FA maintext CODE >39:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+7F5 cinit CODE >5884:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7F5 cinit CODE >5887:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7F5 cinit CODE >5938:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7F6 cinit CODE >5939:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7F7 cinit CODE >5940:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7F8 cinit CODE >5941:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7F9 cinit CODE >5942:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7FA cinit CODE >5943:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7FD cinit CODE >5949:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7FD cinit CODE >5951:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+7FE cinit CODE >5952:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+62B text18 CODE >174:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+62B text18 CODE >175:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+630 text18 CODE >176:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+631 text17 CODE >166:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+631 text17 CODE >167:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+636 text17 CODE >168:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+637 text16 CODE >170:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+637 text16 CODE >171:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+63C text16 CODE >172:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6C3 text15 CODE >66:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6C3 text15 CODE >71:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6C6 text15 CODE >74:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6C8 text15 CODE >77:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6CA text15 CODE >80:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6CC text15 CODE >83:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6CE text15 CODE >86:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6D5 text15 CODE >87:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6DC text15 CODE >88:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6E3 text15 CODE >90:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+6E5 text15 CODE >92:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+66F text14 CODE >62:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+66F text14 CODE >65:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+672 text14 CODE >67:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+673 text14 CODE >69:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+674 text14 CODE >71:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+676 text14 CODE >73:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+677 text14 CODE >75:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+678 text14 CODE >77:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+678 text14 CODE >79:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+67C text14 CODE >80:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+70E text13 CODE >55:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+70E text13 CODE >60:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+710 text13 CODE >61:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+711 text13 CODE >62:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+713 text13 CODE >67:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+715 text13 CODE >68:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+717 text13 CODE >69:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+719 text13 CODE >74:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+71C text13 CODE >75:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+71E text13 CODE >76:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+720 text13 CODE >81:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+721 text13 CODE >82:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+722 text13 CODE >83:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+723 text13 CODE >84:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+724 text13 CODE >89:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+725 text13 CODE >90:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+726 text13 CODE >91:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+728 text13 CODE >96:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+72A text13 CODE >97:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+72C text13 CODE >98:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+72E text13 CODE >103:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+730 text13 CODE >104:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+732 text13 CODE >105:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+734 text13 CODE >106:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+736 text13 CODE >115:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+738 text13 CODE >116:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+73B text13 CODE >117:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+650 text12 CODE >82:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+650 text12 CODE >85:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+652 text12 CODE >87:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+653 text12 CODE >89:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+654 text12 CODE >91:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+655 text12 CODE >93:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+656 text12 CODE >95:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+657 text12 CODE >96:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+649 text11 CODE >58:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm3.c
+649 text11 CODE >62:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm3.c
+64B text11 CODE >65:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm3.c
+64D text11 CODE >68:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm3.c
+64F text11 CODE >70:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm3.c
+621 text10 CODE >58:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm4.c
+621 text10 CODE >62:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm4.c
+623 text10 CODE >65:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm4.c
+624 text10 CODE >68:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm4.c
+625 text10 CODE >70:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm4.c
+626 text9 CODE >58:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm5.c
+626 text9 CODE >62:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm5.c
+628 text9 CODE >65:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm5.c
+629 text9 CODE >68:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm5.c
+62A text9 CODE >70:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm5.c
+662 text8 CODE >62:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+662 text8 CODE >67:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+665 text8 CODE >70:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+666 text8 CODE >73:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+667 text8 CODE >76:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+669 text8 CODE >79:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+66A text8 CODE >82:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+66C text8 CODE >85:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+66E text8 CODE >86:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+68F text7 CODE >50:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+68F text7 CODE >52:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+692 text7 CODE >53:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+695 text7 CODE >54:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+698 text7 CODE >55:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+69B text7 CODE >56:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+69E text7 CODE >57:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+6A1 text7 CODE >58:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+6A4 text7 CODE >59:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+6A7 text7 CODE >60:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+658 text6 CODE >132:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+659 text6 CODE >134:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+659 text6 CODE >136:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+65E text6 CODE >138:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+661 text6 CODE >139:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+63D text5 CODE >146:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+63E text5 CODE >148:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+642 text5 CODE >149:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+73C text4 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+73C text4 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+746 text4 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+74A text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+74B text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+772 text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+77A text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+77B text3 CODE >670:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+77C text3 CODE >680:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+78E text3 CODE >681:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+796 text3 CODE >683:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+79A text3 CODE >684:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+79E text3 CODE >1350:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7AF text3 CODE >1351:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7B7 text3 CODE >1352:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7C2 text3 CODE >1353:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7C7 text3 CODE >1357:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7CF text3 CODE >1358:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7D2 text3 CODE >1362:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7EB text3 CODE >1363:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+7F4 text3 CODE >1365:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+6E6 text2 CODE >1368:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+6E8 text2 CODE >1373:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+6EC text2 CODE >1374:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+6EE text2 CODE >1375:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+6EF text2 CODE >1376:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+700 text2 CODE >1375:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+709 text2 CODE >1378:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+70D text2 CODE >1382:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+67D text1 CODE >5:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
+67D text1 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
+682 text1 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
+68E text1 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
+6A8 maintext CODE >57:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+6A8 maintext CODE >60:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+6AB maintext CODE >80:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+6B3 maintext CODE >84:D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+643 clrtext CODE >5927:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+643 clrtext CODE >5928:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+644 clrtext CODE >5929:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+644 clrtext CODE >5930:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+645 clrtext CODE >5931:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+646 clrtext CODE >5932:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+647 clrtext CODE >5933:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
+648 clrtext CODE >5934:C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -198,43 +367,112 @@ $dist/default/production\LED_DRIVER.X.production.o
 %SYMTAB
 ___latbits 3 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hspace_0 800C 0 ABS 0 - -
-__Hspace_1 0 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
+_PWM3CON 316 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM3DCH 315 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM3DCL 314 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM4CON 31A 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM4DCH 319 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM4DCL 318 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM5CON 31E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM5DCH 31D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM5DCL 31C 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+EUSART1_SetErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_Initialize D86 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PMD_Initialize CA0 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 __CFG_WDTCCS$SC 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+?_vfprintf 56 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+_LATA 18 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_LATB 19 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _LATC 1A 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-_main FDE 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+_PLLR 4480 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PMD0 796 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PMD1 797 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PMD2 798 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PMD3 799 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PMD4 79A 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PMD5 79B 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_T2PR 28D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_TMR2 28C 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_WPUA 1F39 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_WPUB 1F44 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_WPUC 1F4F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_WPUE 1F65 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+_main D50 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+_nout 40 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_prec 44 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-start 4 0 CODE 0 init C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+start 4 0 CODE 0 init C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
 __size_of_main 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_PWM5_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
+__end_of_vfpfcnvrt FEA 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+_TMR2_Initialize CC4 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
+__size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+__size_of_EUSART1_SetErrorHandler 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+_RC1STAbits 11D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_PMD_Initialize CB0 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
+EUSART1_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
+_vfpfcnvrt EF6 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+_ANSELA 1F38 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_ANSELB 1F43 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _ANSELC 1F4E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
+?_printf 5E 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-___stackhi 27EF 0 ABS 0 - C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
-___stacklo 2000 0 ABS 0 - C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
+EUSART1_SetFramingErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+_INLVLA 1F3C 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_INLVLB 1F47 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_INLVLC 1F52 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_INLVLE 1F68 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+___stackhi 27EF 0 ABS 0 - C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+___stacklo 2045 0 ABS 0 - C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
 __CFG_SAFEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__CFG_PPS1WAY$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-start_initialization FFA 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
+__size_of_fputc 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_putch 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_TMR2_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PIN_MANAGER_Initialize E1C 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
+start_initialization FEA 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
+_eusart1RxLastError 50 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_ODCONA 1F3A 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_ODCONB 1F45 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_ODCONC 1F50 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_OSCFRQ 893 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_TRISCbits 14 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
+_RC1REG 119 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_RC1STA 11D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_RC6PPS 1F26 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_SYSTEM_Initialize D50 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+clear_ram0 C86 0 CODE 0 clrtext dist/default/production\LED_DRIVER.X.production.o
+__pcstackBANK0 51 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+_T2CLKCON 290 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_TX1REG 11A 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_TX1STA 11E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__CFG_RSTOSC$HFINTPLL 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_printf D1E 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+fputc@fp 74 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+__end_of_PWM3_Initialize CA0 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_Write CB0 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -247,6 +485,7 @@ __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
 __Hcinit 1000 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
+__size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
 __Hsfr12 0 0 ABS 0 sfr12 -
@@ -358,8 +597,10 @@ __Hbank62 0 0 BANK62 1 bank62 -
 __Hbank63 0 0 BANK63 1 bank63 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
+_BAUD1CON 11F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10018 0 CONFIG 0 config -
+_T2HLTbits 28F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -370,7 +611,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit FFA 0 CODE 0 cinit -
+__Lcinit FEA 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -427,6 +668,10 @@ __Lsfr61 0 0 ABS 0 sfr61 -
 __Lsfr62 0 0 ABS 0 sfr62 -
 __Lsfr63 0 0 ABS 0 sfr63 -
 __Lstack 0 0 STACK 2 stack -
+_EUSART1_FramingErrorHandler 4E 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_OverrunErrorHandler 4C 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+__size_of_EUSART1_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_EUSART1_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 4 0 CODE 0 init -
@@ -455,14 +700,42 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
+__pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\LED_DRIVER.X.production.o
+__pstringtext2 0 0 STRCODE 0 stringtext2 dist/default/production\LED_DRIVER.X.production.o
 __CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_PR2 28D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __S0 800C 0 ABS 0 - -
-__S1 0 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
+_EUSART1_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_T2RSTbits 291 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM3_Initialize C92 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
 __CFG_BBEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_SYSTEM_Initialize D1E 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\JOEMDI~1\AppData\Local\Temp\s25g.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\JOEMDI~1\AppData\Local\Temp\s1o4.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+vfpfcnvrt@fmt 7A 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+__end_of_PWM4_Initialize C4C 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
+__size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_EUSART1_Write 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__ptext10 C42 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
+__ptext11 C92 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
+__ptext12 CA0 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
+__ptext13 E1C 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
+__ptext14 CDE 0 CODE 0 text14 dist/default/production\LED_DRIVER.X.production.o
+__ptext15 D86 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
+__ptext16 C6E 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
+__ptext17 C62 0 CODE 0 text17 dist/default/production\LED_DRIVER.X.production.o
+__ptext18 C56 0 CODE 0 text18 dist/default/production\LED_DRIVER.X.production.o
+__end_of_PIN_MANAGER_Initialize E78 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_ErrorHandler 4A 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -517,48 +790,124 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext FDE 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+__pmaintext D50 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_BBSIZE$BB512 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
+_printf CFA 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_SetErrorHandler C56 0 CODE 0 text18 dist/default/production\LED_DRIVER.X.production.o
 __CFG_WRTAPP$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_EUSART1_SetErrorHandler C62 0 CODE 0 text18 dist/default/production\LED_DRIVER.X.production.o
+__size_of_vfprintf 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_EUSART1_SetFramingErrorHandler C6E 0 CODE 0 text17 dist/default/production\LED_DRIVER.X.production.o
+__end_of_EUSART1_SetOverrunErrorHandler C7A 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
+__end_of_EUSART1_Write CC4 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
+_OSCCON1 88D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_OSCCON3 88F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_OSCSTAT 890 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_OSCTUNE 892 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+?_vfpfcnvrt 7A 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_PWM3_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM4_Initialize C42 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR3bits 70F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PIR4bits 710 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lend_init 4 0 CODE 0 end_init -
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__CFG_CSWEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+printf@ap 62 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
-__CFG_RSTOSC$HFINT32 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_printf 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+fputc@c 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+_TX1STAbits 11E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lstrings 0 0 ABS 0 strings -
+vfprintf@fmt 56 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+vfpfcnvrt@ap 7B 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+vfpfcnvrt@fp 7C 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+__ptext1 CFA 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
+__ptext2 DCC 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
+__ptext3 EF6 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+__ptext4 E78 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
+__ptext5 C7A 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
+__ptext6 CB0 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
+__ptext7 D1E 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+__ptext8 CC4 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
+__ptext9 C4C 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
+_RX1DTPPS 1ECB 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+vfprintf@ap 58 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+vfprintf@fp 5B 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+vfprintf@cfmt 5C 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+__end_of_PWM5_Initialize C56 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
+_vfprintf DCC 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__end_of_vfprintf E1C 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
+_SLRCONA 1F3B 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_SLRCONB 1F46 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_SLRCONC 1F51 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_SP1BRGH 11C 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_SP1BRGL 11B 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_main FFA 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
-_ODCONCbits 1F50 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_PWM4_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_PWM5_Initialize C4C 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_SetFramingErrorHandler C62 0 CODE 0 text17 dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_SetOverrunErrorHandler C6E 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
+putch@txData 71 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+__end_of_main D86 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+printf@fmt 5E 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 __CFG_WRTSAF$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_fputc EF6 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
+_OSCEN 891 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_T2CON 28E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_T2HLT 28F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_T2RST 291 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_T2TMR 28C 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_TRISA 12 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_TRISB 13 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_TRISC 14 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_putch C86 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__initialization FFA 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
+_flags 46 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_fputc E78 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
+_putch C7A 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
+_width 42 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+__size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_EUSART1_Initialize DCC 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
+__end_of_OSCILLATOR_Initialize CFA 0 CODE 0 text14 dist/default/production\LED_DRIVER.X.production.o
+__CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__initialization FEA 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_T2CONbits 28E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+EUSART1_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+_OSCILLATOR_Initialize CDE 0 CODE 0 text14 dist/default/production\LED_DRIVER.X.production.o
+__end_of_TMR2_Initialize CDE 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -584,9 +933,31 @@ __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7FD FFA 3 2
-maintext 0 7EF FDE E 2
+cinit 0 7F5 FEA B 2
+text1 0 67D CFA 12 2
+text2 0 6E6 DCC 28 2
+text3 0 77B EF6 7A 2
+text4 0 73C E78 3F 2
+text5 0 63D C7A 6 2
+text6 0 658 CB0 A 2
+text7 0 68F D1E 19 2
+text8 0 662 CC4 D 2
+text9 0 626 C4C 5 2
+text10 0 621 C42 5 2
+text11 0 649 C92 7 2
+text12 0 650 CA0 8 2
+text13 0 70E E1C 2E 2
+text14 0 66F CDE E 2
+text15 0 6C3 D86 23 2
+text16 0 637 C6E 6 2
+text17 0 631 C62 6 2
+text18 0 62B C56 6 2
+maintext 0 6A8 D50 1B 2
+cstackCOMMON 1 70 70 E 1
+stringtext1 0 800 1000 F 2
 reset_vec 0 0 0 4 2
+bssBANK0 1 20 20 45 1
+clrtext 0 643 C86 6 2
 config 0 8007 1000E 5 2
 # OTES Section
 # This section contains data of all the note-psects.  The beginning of the section

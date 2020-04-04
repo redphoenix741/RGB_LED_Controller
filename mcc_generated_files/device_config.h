@@ -1,21 +1,24 @@
 /**
-  Generated Main Source File
+  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
 
-  Company:
+  @Company:
     Microchip Technology Inc.
 
-  File Name:
-    main.c
+  @File Name:
+    mcc.c
 
-  Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary:
+    This is the device_config.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  Description:
+  @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.80.0
         Device            :  PIC16F15356
         Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 2.10 and above or later
+        MPLAB             :  MPLAB X 5.30
 */
 
 /*
@@ -41,44 +44,12 @@
     SOFTWARE.
 */
 
-#include "mcc_generated_files/mcc.h"
+#ifndef DEVICE_CONFIG_H
+#define	DEVICE_CONFIG_H
 
-/*
-                         Main application
- */
+#define _XTAL_FREQ 32000000
 
-char colorHex[10];
-
-void main(void)
-{
-    // initialize the device
-    SYSTEM_Initialize();
-    
-    
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-
-    while (1)
-    {
-        printf("Hello World!\r\n Enter color in Hex: ");
-        scanf("%s", &colorHex);
-        __delay_ms(150);
-        // Add your application code
-    }
-}
-
+#endif	/* DEVICE_CONFIG_H */
 /**
  End of File
 */

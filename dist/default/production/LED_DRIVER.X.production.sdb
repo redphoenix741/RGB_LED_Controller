@@ -3,42 +3,495 @@
 [d edition pro ]
 [d chip 16F15356 ]
 [d frameptr 6 ]
+"88 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+[e E7316 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"94
+[e E7339 . `uc
+TMR2_T2INPPS 0
+TMR2_CCP1_OUT 1
+TMR2_CCP2_OUT 2
+TMR2_PWM3_OUT 3
+TMR2_PWM4_OUT 4
+TMR2_PWM5_OUT 5
+TMR2_PWM6_OUT 6
+TMR2_C1_OUT_SYNC 7
+TMR2_C2_OUT_SYNC 8
+TMR2_ZCD_OUTPUT 9
+TMR2_CLC1_OUT 10
+TMR2_CLC2_OUT 11
+TMR2_CLC3_OUT 12
+TMR2_CLC4_OUT 13
+]
+"670 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1368
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"20 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+"57 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
 [v _main main `(v  1 e 1 0 ]
-[s S22 . 1 `uc 1 TRISC0 1 0 :1:0 
-`uc 1 TRISC1 1 0 :1:1 
-`uc 1 TRISC2 1 0 :1:2 
-`uc 1 TRISC3 1 0 :1:3 
-`uc 1 TRISC4 1 0 :1:4 
-`uc 1 TRISC5 1 0 :1:5 
-`uc 1 TRISC6 1 0 :1:6 
-`uc 1 TRISC7 1 0 :1:7 
-]
-"794 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
-[u S31 . 1 `S22 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES31  1 e 1 @20 ]
+"66 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"113
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+"132
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"146
+[v _putch putch `(v  1 e 1 0 ]
+"153
+[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"155
+[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"163
+[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"166
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"170
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"174
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+"50 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"62
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"82
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"58 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+"58 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+"58 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm5.c
+[v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
+"62 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"100
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"111
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"122
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"136
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"147
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"653 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+"715
+[v _TRISB TRISB `VEuc  1 e 1 @19 ]
+"777
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"860
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+"922
+[v _LATB LATB `VEuc  1 e 1 @25 ]
 "984
 [v _LATC LATC `VEuc  1 e 1 @26 ]
+"1388
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"1442
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"1503
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"1573
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"1627
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+[s S185 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1653
+[u S194 . 1 `S185 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES194  1 e 1 @285 ]
+"1807
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+[s S164 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"1833
+[u S173 . 1 `S164 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES173  1 e 1 @286 ]
+"1987
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+"5016
+[v _T2TMR T2TMR `VEuc  1 e 1 @652 ]
+"5021
+[v _TMR2 TMR2 `VEuc  1 e 1 @652 ]
+"5070
+[v _T2PR T2PR `VEuc  1 e 1 @653 ]
+"5075
+[v _PR2 PR2 `VEuc  1 e 1 @653 ]
+"5124
+[v _T2CON T2CON `VEuc  1 e 1 @654 ]
+[s S413 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"5160
+[s S417 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+]
+[s S425 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S429 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S438 . 1 `S413 1 . 1 0 `S417 1 . 1 0 `S425 1 . 1 0 `S429 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES438  1 e 1 @654 ]
+"5270
+[v _T2HLT T2HLT `VEuc  1 e 1 @655 ]
+[s S314 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"5303
+[s S319 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S325 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S330 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S336 . 1 `S314 1 . 1 0 `S319 1 . 1 0 `S325 1 . 1 0 `S330 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES336  1 e 1 @655 ]
+"5398
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @656 ]
+"5478
+[v _T2RST T2RST `VEuc  1 e 1 @657 ]
+[s S379 . 1 `uc 1 RSEL 1 0 :4:0 
+]
+"5503
+[s S381 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+]
+[s S386 . 1 `uc 1 T2RSEL 1 0 :4:0 
+]
+[s S388 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+]
+[u S393 . 1 `S379 1 . 1 0 `S381 1 . 1 0 `S386 1 . 1 0 `S388 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES393  1 e 1 @657 ]
+"6049
+[v _PWM3DCL PWM3DCL `VEuc  1 e 1 @788 ]
+"6115
+[v _PWM3DCH PWM3DCH `VEuc  1 e 1 @789 ]
+"6285
+[v _PWM3CON PWM3CON `VEuc  1 e 1 @790 ]
+"6348
+[v _PWM4DCL PWM4DCL `VEuc  1 e 1 @792 ]
+"6414
+[v _PWM4DCH PWM4DCH `VEuc  1 e 1 @793 ]
+"6584
+[v _PWM4CON PWM4CON `VEuc  1 e 1 @794 ]
+"6647
+[v _PWM5DCL PWM5DCL `VEuc  1 e 1 @796 ]
+"6713
+[v _PWM5DCH PWM5DCH `VEuc  1 e 1 @797 ]
+"6883
+[v _PWM5CON PWM5CON `VEuc  1 e 1 @798 ]
+[s S143 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 TX2IF 1 0 :1:6 
+`uc 1 RC2IF 1 0 :1:7 
+]
+"9166
+[u S152 . 1 `S143 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES152  1 e 1 @1807 ]
+[s S282 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+]
+"9222
+[u S285 . 1 `S282 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES285  1 e 1 @1808 ]
+"9656
+[v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
+"9701
+[v _PMD1 PMD1 `VEuc  1 e 1 @1943 ]
+"9749
+[v _PMD2 PMD2 `VEuc  1 e 1 @1944 ]
+"9794
+[v _PMD3 PMD3 `VEuc  1 e 1 @1945 ]
+"9844
+[v _PMD4 PMD4 `VEuc  1 e 1 @1946 ]
+"9889
+[v _PMD5 PMD5 `VEuc  1 e 1 @1947 ]
+"10951
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"11091
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"11131
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @2192 ]
+"11188
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"11239
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"11297
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"18234
+[v _RX1DTPPS RX1DTPPS `VEuc  1 e 1 @7883 ]
+"19434
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @7974 ]
+"19522
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"19584
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"19646
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"19708
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"19770
+[v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
+"20018
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"20080
+[v _WPUB WPUB `VEuc  1 e 1 @8004 ]
+"20142
+[v _ODCONB ODCONB `VEuc  1 e 1 @8005 ]
+"20204
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @8006 ]
+"20266
+[v _INLVLB INLVLB `VEuc  1 e 1 @8007 ]
 "20514
 [v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
-[s S45 . 1 `uc 1 ODCC0 1 0 :1:0 
-`uc 1 ODCC1 1 0 :1:1 
-`uc 1 ODCC2 1 0 :1:2 
-`uc 1 ODCC3 1 0 :1:3 
-`uc 1 ODCC4 1 0 :1:4 
-`uc 1 ODCC5 1 0 :1:5 
-`uc 1 ODCC6 1 0 :1:6 
-`uc 1 ODCC7 1 0 :1:7 
+"20576
+[v _WPUC WPUC `VEuc  1 e 1 @8015 ]
+"20638
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"20700
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"20762
+[v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
+"21010
+[v _WPUE WPUE `VEuc  1 e 1 @8037 ]
+"21031
+[v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
+"24364
+[v _PLLR PLLR `VEb  1 e 0 @17536 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+[v _flags flags `i  1 s 2 flags ]
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"69
+[v _nout nout `i  1 s 2 nout ]
+[s S97 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
 ]
-"20655
-[u S54 . 1 `S45 1 . 1 0 ]
-[v _ODCONCbits ODCONCbits `VES54  1 e 1 @8016 ]
-"20 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+"52 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+[u S102 . 1 `S97 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES102  1 e 1 0 ]
+"58
+[v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
+"57 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"41
+"87
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.4v  1 a 1 17 ]
+"5
+[v printf@fmt fmt `*.25DCuc  1 p 2 13 ]
+"13
+} 0
+"1368 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+[s S577 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S577  1 a 1 wreg ]
+"1371
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 11 ]
+"1368
+[v vfprintf@fp fp `*.1S577  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 5 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 7 ]
+"1373
+"1368
+[v vfprintf@fp fp `*.1S577  1 a 1 10 ]
+"1382
+} 0
+"670
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[s S577 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S577  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.1S577  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 10 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 11 ]
+"680
+"670
+[v vfpfcnvrt@fp fp `*.1S577  1 a 1 12 ]
+"1365
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 2 ]
+[s S900 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.1S900  1 p 1 4 ]
+"21
+} 0
+"146 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"148
+[v putch@txData txData `uc  1 a 1 1 ]
+"149
+} 0
+"132
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 0 ]
+"139
+} 0
+"50 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"62 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"58 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm5.c
+[v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"58 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"58 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"82 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"96
+} 0
+"55 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"117
+} 0
+"62 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"80
+} 0
+"66 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"170
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"172
+} 0
+"166
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"168
+} 0
+"174
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"176
 } 0

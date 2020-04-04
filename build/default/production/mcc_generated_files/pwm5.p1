@@ -1,14 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"74 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"111 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-[v F7275 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF7275 ~T0 @X0 0 e ]
-[p i __delay ]
+"6883 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 6883: extern volatile unsigned char PWM5CON __attribute__((address(0x31E)));
+[v _PWM5CON `Vuc ~T0 @X0 0 e@798 ]
+"6713
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 6713: extern volatile unsigned char PWM5DCH __attribute__((address(0x31D)));
+[v _PWM5DCH `Vuc ~T0 @X0 0 e@797 ]
+"6647
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 6647: extern volatile unsigned char PWM5DCL __attribute__((address(0x31C)));
+[v _PWM5DCL `Vuc ~T0 @X0 0 e@796 ]
 "110 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1047,42 +1046,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21398
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 21398: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"55 main.c
-[; ;main.c: 55: uint16_t colorHex;
-[v _colorHex `us ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"57
-[; ;main.c: 57: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"58
-[; ;main.c: 58: {
+"58 mcc_generated_files/pwm5.c
+[; ;mcc_generated_files/pwm5.c: 58:  void PWM5_Initialize(void)
+[v _PWM5_Initialize `(v ~T0 @X0 1 ef ]
+"59
+[; ;mcc_generated_files/pwm5.c: 59:  {
 {
-[e :U _main ]
+[e :U _PWM5_Initialize ]
 [f ]
-"60
-[; ;main.c: 60:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"78
-[; ;main.c: 78:     while (1)
-[e :U 986 ]
-"79
-[; ;main.c: 79:     {
+"62
+[; ;mcc_generated_files/pwm5.c: 62:     PWM5CON = 0x00;
+[e = _PWM5CON -> -> 0 `i `uc ]
+"65
+[; ;mcc_generated_files/pwm5.c: 65:     PWM5DCH = 0x00;
+[e = _PWM5DCH -> -> 0 `i `uc ]
+"68
+[; ;mcc_generated_files/pwm5.c: 68:     PWM5DCL = 0x00;
+[e = _PWM5DCL -> -> 0 `i `uc ]
+"70
+[; ;mcc_generated_files/pwm5.c: 70:  }
+[e :UE 980 ]
+}
+"72
+[; ;mcc_generated_files/pwm5.c: 72:  void PWM5_LoadDutyValue(uint16_t dutyValue)
+[v _PWM5_LoadDutyValue `(v ~T0 @X0 1 ef1`us ]
+"73
+[; ;mcc_generated_files/pwm5.c: 73:  {
 {
-"80
-[; ;main.c: 80:         printf("Hello World!\r\n");
-[e ( _printf :s 1C ]
-"84
-[; ;main.c: 84:         _delay((unsigned long)((150)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"86
-[; ;main.c: 86:     }
+[e :U _PWM5_LoadDutyValue ]
+"72
+[; ;mcc_generated_files/pwm5.c: 72:  void PWM5_LoadDutyValue(uint16_t dutyValue)
+[v _dutyValue `us ~T0 @X0 1 r1 ]
+"73
+[; ;mcc_generated_files/pwm5.c: 73:  {
+[f ]
+"75
+[; ;mcc_generated_files/pwm5.c: 75:      PWM5DCH = (dutyValue & 0x03FC)>>2;
+[e = _PWM5DCH -> >> & -> _dutyValue `ui -> -> 1020 `i `ui -> 2 `i `uc ]
+"78
+[; ;mcc_generated_files/pwm5.c: 78:      PWM5DCL = (dutyValue & 0x0003)<<6;
+[e = _PWM5DCL -> << & -> _dutyValue `ui -> -> 3 `i `ui -> 6 `i `uc ]
+"79
+[; ;mcc_generated_files/pwm5.c: 79:  }
+[e :UE 981 ]
 }
-[e :U 985 ]
-[e $U 986  ]
-[e :U 987 ]
-"87
-[; ;main.c: 87: }
-[e :UE 984 ]
-}
-[p f _printf 8388608 ]
-[a 1C 72 101 108 108 111 32 87 111 114 108 100 33 13 10 0 ]
