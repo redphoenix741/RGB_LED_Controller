@@ -58,8 +58,8 @@
  void PWM4_Initialize(void)
  {
     // Set the PWM to the options selected in the PIC10 / PIC12 / PIC16 / PIC18 MCUs.
-    // PWM4POL active_hi; PWM4EN disabled; 
-    PWM4CON = 0x00;   
+    // PWM4POL active_lo; PWM4EN enabled; 
+    PWM4CON = 0x90;   
 
     // DC 0; 
     PWM4DCH = 0x00;   

@@ -58,8 +58,8 @@
  void PWM5_Initialize(void)
  {
     // Set the PWM to the options selected in the PIC10 / PIC12 / PIC16 / PIC18 MCUs.
-    // PWM5POL active_hi; PWM5EN disabled; 
-    PWM5CON = 0x00;   
+    // PWM5POL active_lo; PWM5EN enabled; 
+    PWM5CON = 0x90;   
 
     // DC 0; 
     PWM5DCH = 0x00;   

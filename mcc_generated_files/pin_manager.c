@@ -66,7 +66,7 @@ void PIN_MANAGER_Initialize(void)
     */
     TRISA = 0xFF;
     TRISB = 0xFF;
-    TRISC = 0xBF;
+    TRISC = 0xB8;
 
     /**
     ANSELx registers
@@ -88,7 +88,7 @@ void PIN_MANAGER_Initialize(void)
     */
     ODCONA = 0x00;
     ODCONB = 0x00;
-    ODCONC = 0x07;
+    ODCONC = 0x00;
 
     /**
     SLRCONx registers
@@ -112,6 +112,9 @@ void PIN_MANAGER_Initialize(void)
    
     
 	
+    RC0PPS = 0x0B;   //RC0->PWM3:PWM3OUT;    
+    RC1PPS = 0x0C;   //RC1->PWM4:PWM4OUT;    
+    RC2PPS = 0x0D;   //RC2->PWM5:PWM5OUT;    
     RC6PPS = 0x0F;   //RC6->EUSART1:TX1;    
     RX1DTPPS = 0x17;   //RC7->EUSART1:RX1;    
 }

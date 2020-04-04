@@ -12495,7 +12495,7 @@ typedef uint32_t uint_fast32_t;
  {
 
 
-    PWM5CON = 0x00;
+    PWM5CON = 0x90;
 
 
     PWM5DCH = 0x00;

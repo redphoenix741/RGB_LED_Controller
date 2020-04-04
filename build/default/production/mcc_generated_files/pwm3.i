@@ -12495,13 +12495,13 @@ typedef uint32_t uint_fast32_t;
  {
 
 
-    PWM3CON = 0x00;
+    PWM3CON = 0x90;
 
 
-    PWM3DCH = 0x7F;
+    PWM3DCH = 0x00;
 
 
-    PWM3DCL = 0xC0;
+    PWM3DCL = 0x00;
 
  }
 

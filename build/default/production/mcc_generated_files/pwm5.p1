@@ -1055,8 +1055,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _PWM5_Initialize ]
 [f ]
 "62
-[; ;mcc_generated_files/pwm5.c: 62:     PWM5CON = 0x00;
-[e = _PWM5CON -> -> 0 `i `uc ]
+[; ;mcc_generated_files/pwm5.c: 62:     PWM5CON = 0x90;
+[e = _PWM5CON -> -> 144 `i `uc ]
 "65
 [; ;mcc_generated_files/pwm5.c: 65:     PWM5DCH = 0x00;
 [e = _PWM5DCH -> -> 0 `i `uc ]

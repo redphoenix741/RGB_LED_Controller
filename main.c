@@ -47,7 +47,14 @@
                          Main application
  */
 
-char colorHex[10];
+struct
+{
+    uint16_t red;
+    uint16_t grn;
+    uint16_t blu;
+} rgb;
+
+uint32_t colorHex = 0;
 
 void main(void)
 {
@@ -72,9 +79,17 @@ void main(void)
 
     while (1)
     {
-        printf("Hello World!\r\n Enter color in Hex: ");
-        scanf("%s", &colorHex);
-        __delay_ms(150);
+        printf("\r\nEnter color in Hex RRGGBB:");
+        scanf("%x",&colorHex);
+        printf("%x\r\n",colorHex);
+        
+        rgb.red = (colorHex & 0xFF0000) >> 16;
+        rgb.grn = (colorHex & 0x00FF00) >> 8;
+        rgb.blu = (colorHex & 0x0000FF) >> 0;
+        
+        PWM3_LoadDutyValue(rgb.red);
+        PWM4_LoadDutyValue(rgb.grn);
+        PWM5_LoadDutyValue(rgb.blu);
         // Add your application code
     }
 }
