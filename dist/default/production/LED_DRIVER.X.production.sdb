@@ -1,0 +1,44 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F15356 ]
+[d frameptr 6 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"20 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+[v _main main `(v  1 e 1 0 ]
+[s S22 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"794 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
+[u S31 . 1 `S22 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES31  1 e 1 @20 ]
+"984
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+"20514
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+[s S45 . 1 `uc 1 ODCC0 1 0 :1:0 
+`uc 1 ODCC1 1 0 :1:1 
+`uc 1 ODCC2 1 0 :1:2 
+`uc 1 ODCC3 1 0 :1:3 
+`uc 1 ODCC4 1 0 :1:4 
+`uc 1 ODCC5 1 0 :1:5 
+`uc 1 ODCC6 1 0 :1:6 
+`uc 1 ODCC7 1 0 :1:7 
+]
+"20655
+[u S54 . 1 `S45 1 . 1 0 ]
+[v _ODCONCbits ODCONCbits `VES54  1 e 1 @8016 ]
+"20 D:\Documents\MiniProjects\PIC Projects\LED_DRIVER.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"41
+} 0
