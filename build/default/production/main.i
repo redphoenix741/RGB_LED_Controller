@@ -12946,9 +12946,7 @@ struct
     uint8_t blu;
 } rgb;
 
-char colorHex[3];
-uint8_t updateRGB = 0;
-
+uint8_t state = 0;
 
 
 
@@ -12960,23 +12958,18 @@ uint8_t isDataAvailable(void)
 }
 void main(void)
 {
-    uint8_t state = 0;
+
 
 
     SYSTEM_Initialize();
 
     while (1)
     {
-
-        printf("keep alive\r\n");
         UARTReceivedByte = 0;
-
         switch(state)
         {
             case 0:
             {
-
-                printf("Waiting for period (Start)\r\n");
                 while(UARTReceivedByte != '.')
                 {
                     UARTReceivedByte = isDataAvailable();
@@ -13008,11 +13001,6 @@ void main(void)
             case 4:
             {
 
-                printf("Received value: \r\n"
-                        "Red: %x,\r\n"
-                        "Green: %x,\r\n"
-                        "Blue: %x\r\n",
-                        rgb.red,rgb.grn,rgb.blu);
                 PWM3_LoadDutyValue(rgb.red);
                 PWM4_LoadDutyValue(rgb.grn);
                 PWM5_LoadDutyValue(rgb.blu);

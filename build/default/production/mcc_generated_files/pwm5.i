@@ -12392,8 +12392,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 51 "mcc_generated_files/pwm5.c" 2
-
+# 52 "mcc_generated_files/pwm5.c" 2
 # 1 "mcc_generated_files/pwm5.h" 1
 # 55 "mcc_generated_files/pwm5.h"
 # 1 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
@@ -12484,8 +12483,7 @@ typedef uint32_t uint_fast32_t;
  void PWM5_Initialize(void);
 # 129 "mcc_generated_files/pwm5.h"
  void PWM5_LoadDutyValue(uint16_t dutyValue);
-# 52 "mcc_generated_files/pwm5.c" 2
-
+# 53 "mcc_generated_files/pwm5.c" 2
 
 
 

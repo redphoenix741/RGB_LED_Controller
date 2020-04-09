@@ -12392,8 +12392,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 51 "mcc_generated_files/tmr2.c" 2
-
+# 52 "mcc_generated_files/tmr2.c" 2
 # 1 "mcc_generated_files/tmr2.h" 1
 # 54 "mcc_generated_files/tmr2.h"
 # 1 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
@@ -12677,7 +12676,7 @@ void TMR2_Period8BitSet(uint8_t periodVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 804 "mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 52 "mcc_generated_files/tmr2.c" 2
+# 53 "mcc_generated_files/tmr2.c" 2
 # 62 "mcc_generated_files/tmr2.c"
 void TMR2_Initialize(void)
 {

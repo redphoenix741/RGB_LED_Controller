@@ -44,32 +44,8 @@ TMR2_CLC2_OUT 11
 TMR2_CLC3_OUT 12
 TMR2_CLC4_OUT 13
 ]
-"72 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
-[v _pad pad `(i  1 s 2 pad ]
-"623
-[v _xtoa xtoa `(i  1 s 2 xtoa ]
-"670
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-"1368
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isalpha.c
-[v _isalpha isalpha `(i  1 e 2 0 ]
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\islower.c
-[v _islower islower `(i  1 e 2 0 ]
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isupper.c
-[v _isupper isupper `(i  1 e 2 0 ]
-"8 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-"8 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
-[v _printf printf `(i  1 e 2 0 ]
 "10 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-"4 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\toupper.c
-[v _toupper toupper `(i  1 e 2 0 ]
 "4 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "36 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
@@ -78,14 +54,12 @@ TMR2_CLC4_OUT 13
 [v _UART_Rx_IntHandler UART_Rx_IntHandler `(v  1 e 1 0 ]
 "88
 [v _Interrupt_Handler Interrupt_Handler `II(v  1 e 1 0 ]
-"61 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+"59 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
 [v _isDataAvailable isDataAvailable `(uc  1 e 1 0 ]
-"67
+"65
 [v _main main `(v  1 e 1 0 ]
 "54 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
-"77
-[v _putch putch `(v  1 e 1 0 ]
 "50 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "62
@@ -374,177 +348,20 @@ TMR2_CLC4_OUT 13
 [v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
 "24364
 [v _PLLR PLLR `VEb  1 e 0 @17536 ]
-"55 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
-[v _flags flags `i  1 s 2 flags ]
-[v _prec prec `i  1 s 2 prec ]
-[v _width width `i  1 s 2 width ]
-"66
-[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
-"69
-[v _nout nout `i  1 s 2 nout ]
 [s S497 . 3 `uc 1 red 1 0 `uc 1 grn 1 1 `uc 1 blu 1 2 ]
 "53 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
 [v _rgb rgb `S497  1 e 3 0 ]
-"67
+"55
+[v _state state `uc  1 e 1 0 ]
+"65
 [v _main main `(v  1 e 1 0 ]
 {
-"69
-[v main@state state `uc  1 a 1 79 ]
-"130
+"118
 } 0
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
-[v _printf printf `(i  1 e 2 0 ]
-{
-"8
-[v printf@ap ap `[1]*.4v  1 a 1 13 ]
-"5
-[v printf@fmt fmt `*.25DCuc  1 p 2 3 ]
-"13
-} 0
-"1368 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-{
-[s S580 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.1S580  1 a 1 wreg ]
-"1371
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 1 ]
-"1368
-[v vfprintf@fp fp `*.1S580  1 a 1 wreg ]
-[v vfprintf@fmt fmt `*.25DCuc  1 p 2 73 ]
-[v vfprintf@ap ap `*.4*.4v  1 p 1 75 ]
-"1373
-"1368
-[v vfprintf@fp fp `*.1S580  1 a 1 0 ]
-"1382
-} 0
-"670
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-{
-[s S580 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.1S580  1 a 1 wreg ]
-"675
-[v vfpfcnvrt@llu llu `uo  1 a 8 63 ]
-"672
-[v vfpfcnvrt@c c `uc  1 a 1 71 ]
-"670
-[v vfpfcnvrt@fp fp `*.1S580  1 a 1 wreg ]
-[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 56 ]
-[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 57 ]
-"680
-"670
-[v vfpfcnvrt@fp fp `*.1S580  1 a 1 72 ]
-"1365
-} 0
-"623
-[v _xtoa xtoa `(i  1 s 2 xtoa ]
-{
-[s S580 _IO_FILE 0 ]
-[v xtoa@fp fp `*.1S580  1 a 1 wreg ]
-"626
-[v xtoa@n n `uo  1 a 8 44 ]
-"625
-[v xtoa@c c `i  1 a 2 54 ]
-[v xtoa@i i `i  1 a 2 52 ]
-[v xtoa@w w `i  1 a 2 42 ]
-[v xtoa@p p `i  1 a 2 40 ]
-"623
-[v xtoa@fp fp `*.1S580  1 a 1 wreg ]
-[v xtoa@d d `uo  1 p 8 18 ]
-[v xtoa@x x `uc  1 p 1 26 ]
-"629
-"623
-[v xtoa@fp fp `*.1S580  1 a 1 39 ]
-"665
-} 0
-"4 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\toupper.c
-[v _toupper toupper `(i  1 e 2 0 ]
-{
-[v toupper@c c `i  1 p 2 8 ]
-"8
-} 0
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\islower.c
-[v _islower islower `(i  1 e 2 0 ]
-{
-[v islower@c c `i  1 p 2 2 ]
-"8
-} 0
-"72 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
-[v _pad pad `(i  1 s 2 pad ]
-{
-[s S580 _IO_FILE 0 ]
-[v pad@fp fp `*.1S580  1 a 1 wreg ]
-"74
-[v pad@w w `i  1 a 2 15 ]
-[v pad@i i `i  1 a 2 13 ]
-"72
-[v pad@fp fp `*.1S580  1 a 1 wreg ]
-[v pad@buf buf `*.5uc  1 p 1 9 ]
-[v pad@p p `i  1 p 2 10 ]
-"77
-"72
-[v pad@fp fp `*.1S580  1 a 1 17 ]
-"95
-} 0
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-[v strlen@s s `*.5DCuc  1 a 1 wreg ]
-"7
-[v strlen@a a `*.5DCuc  1 a 1 5 ]
-"5
-[v strlen@s s `*.5DCuc  1 a 1 wreg ]
-"7
-[v strlen@s s `*.5DCuc  1 a 1 6 ]
-"12
-} 0
-"8 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-{
-[v fputs@s s `*.5DCuc  1 a 1 wreg ]
-"11
-[v fputs@i i `i  1 a 2 6 ]
-"10
-[v fputs@c c `uc  1 a 1 5 ]
-"8
-[v fputs@s s `*.5DCuc  1 a 1 wreg ]
-[s S954 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.1S954  1 p 1 6 ]
-"13
-[v fputs@s s `*.5DCuc  1 a 1 8 ]
-"19
-} 0
-"8 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-{
-[v fputc@c c `i  1 p 2 3 ]
-[s S954 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.1S954  1 p 1 5 ]
-"21
-} 0
-"77 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-[v _putch putch `(v  1 e 1 0 ]
-{
-[v putch@txData txData `uc  1 a 1 wreg ]
-[v putch@txData txData `uc  1 a 1 wreg ]
-[v putch@txData txData `uc  1 a 1 2 ]
-"84
-} 0
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isupper.c
-[v _isupper isupper `(i  1 e 2 0 ]
-{
-[v isupper@c c `i  1 p 2 2 ]
-"8
-} 0
-"5 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isalpha.c
-[v _isalpha isalpha `(i  1 e 2 0 ]
-{
-[v isalpha@c c `i  1 p 2 2 ]
-"8
-} 0
-"61 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+"59
 [v _isDataAvailable isDataAvailable `(uc  1 e 1 0 ]
 {
-"66
+"64
 } 0
 "50 D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
