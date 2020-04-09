@@ -42,55 +42,90 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "interrupt.h"
+
+/* User - Define */
+struct
+{
+    uint8_t red;
+    uint8_t grn;
+    uint8_t blu;
+} rgb;
+
+char colorHex[3];
+uint8_t updateRGB = 0;
 
 /*
                          Main application
  */
-
-struct
+uint8_t isDataAvailable(void)
 {
-    uint16_t red;
-    uint16_t grn;
-    uint16_t blu;
-} rgb;
-
-uint32_t colorHex = 0;
-
+    while(PIR3bits.RC1IF != 1); //Wait for Received
+    PIR3bits.RC1IF = 0;
+    return RC1REG;
+}
 void main(void)
 {
+    uint8_t state = 0;
+    
     // initialize the device
     SYSTEM_Initialize();
-    
-    
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
 
     while (1)
-    {
-        printf("\r\nEnter color in Hex RRGGBB:");
-        scanf("%x",&colorHex);
-        printf("%x\r\n",colorHex);
+    {   
+        //Clear Screen
+        printf("keep alive\r\n");
+        UARTReceivedByte = 0;
         
-        rgb.red = (colorHex & 0xFF0000) >> 16;
-        rgb.grn = (colorHex & 0x00FF00) >> 8;
-        rgb.blu = (colorHex & 0x0000FF) >> 0;
-        
-        PWM3_LoadDutyValue(rgb.red);
-        PWM4_LoadDutyValue(rgb.grn);
-        PWM5_LoadDutyValue(rgb.blu);
-        // Add your application code
+        switch(state)
+        {
+            case 0:
+            {
+                //Wait for period
+                printf("Waiting for period (Start)\r\n");
+                while(UARTReceivedByte != '.') //Wait until period is received 
+                {
+                    UARTReceivedByte = isDataAvailable();
+                    state++;
+                }
+                break;
+            }
+            case 1:
+            {
+                //Red
+                rgb.red = isDataAvailable();
+                state++;
+                break;
+            }
+            case 2:
+            {
+                //Green
+                rgb.grn = isDataAvailable();
+                state++;
+                break;
+            }
+            case 3:
+            {
+                //Blue
+                rgb.blu = isDataAvailable();
+                state++;
+                break;
+            }
+            case 4:
+            {
+                //Set PWM output to rgb
+                printf("Received value: \r\n"
+                        "Red: %x,\r\n"
+                        "Green: %x,\r\n"
+                        "Blue: %x\r\n",
+                        rgb.red,rgb.grn,rgb.blu);
+                PWM3_LoadDutyValue(rgb.red);
+                PWM4_LoadDutyValue(rgb.grn);
+                PWM5_LoadDutyValue(rgb.blu);
+                state = 0;
+                break;
+            }
+        }
     }
 }
 

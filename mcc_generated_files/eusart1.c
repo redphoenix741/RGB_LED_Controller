@@ -48,21 +48,9 @@
   Section: Included Files
 */
 #include "eusart1.h"
-
-volatile eusart1_status_t eusart1RxLastError;
-
 /**
   Section: EUSART1 APIs
 */
-
-void (*EUSART1_FramingErrorHandler)(void);
-void (*EUSART1_OverrunErrorHandler)(void);
-void (*EUSART1_ErrorHandler)(void);
-
-void EUSART1_DefaultFramingErrorHandler(void);
-void EUSART1_DefaultOverrunErrorHandler(void);
-void EUSART1_DefaultErrorHandler(void);
-
 void EUSART1_Initialize(void)
 {
     // Set the EUSART1 module to the options selected in the user interface.
@@ -81,55 +69,12 @@ void EUSART1_Initialize(void)
 
     // SP1BRGH 3; 
     SP1BRGH = 0x03;
-
-
-    EUSART1_SetFramingErrorHandler(EUSART1_DefaultFramingErrorHandler);
-    EUSART1_SetOverrunErrorHandler(EUSART1_DefaultOverrunErrorHandler);
-    EUSART1_SetErrorHandler(EUSART1_DefaultErrorHandler);
-
-    eusart1RxLastError.status = 0;
-
-}
-
-bool EUSART1_is_tx_ready(void)
-{
-    return (bool)(PIR3bits.TX1IF && TX1STAbits.TXEN);
-}
-
-bool EUSART1_is_rx_ready(void)
-{
-    return (bool)(PIR3bits.RC1IF);
-}
-
-bool EUSART1_is_tx_done(void)
-{
-    return TX1STAbits.TRMT;
-}
-
-eusart1_status_t EUSART1_get_last_status(void){
-    return eusart1RxLastError;
-}
-
-uint8_t EUSART1_Read(void)
-{
-    while(!PIR3bits.RC1IF)
-    {
-    }
-
-    eusart1RxLastError.status = 0;
     
-    if(1 == RC1STAbits.OERR)
-    {
-        // EUSART1 error - restart
-
-        RC1STAbits.CREN = 0; 
-        RC1STAbits.CREN = 1; 
-    }
-
-    return RC1REG;
+    //Interrupt Enabler
+    PIR3bits.RC1IF = 0;
+    PIE3bits.RC1IE = 1;
 }
-
-void EUSART1_Write(uint8_t txData)
+void putch(char txData)
 {
     while(0 == PIR3bits.TX1IF)
     {
@@ -137,44 +82,6 @@ void EUSART1_Write(uint8_t txData)
 
     TX1REG = txData;    // Write the data byte to the USART.
 }
-
-int getch(void)
-{
-    return EUSART1_Read();
-}
-
-void putch(char txData)
-{
-    EUSART1_Write(txData);
-}
-
-
-
-void EUSART1_DefaultFramingErrorHandler(void){}
-
-void EUSART1_DefaultOverrunErrorHandler(void){
-    // EUSART1 error - restart
-
-    RC1STAbits.CREN = 0;
-    RC1STAbits.CREN = 1;
-
-}
-
-void EUSART1_DefaultErrorHandler(void){
-}
-
-void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void)){
-    EUSART1_FramingErrorHandler = interruptHandler;
-}
-
-void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void)){
-    EUSART1_OverrunErrorHandler = interruptHandler;
-}
-
-void EUSART1_SetErrorHandler(void (* interruptHandler)(void)){
-    EUSART1_ErrorHandler = interruptHandler;
-}
-
 
 /**
   End of File

@@ -1,13 +1,45 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"6883 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
-[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 6883: extern volatile unsigned char PWM5CON __attribute__((address(0x31E)));
-[v _PWM5CON `Vuc ~T0 @X0 0 e@798 ]
-"6713
-[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 6713: extern volatile unsigned char PWM5DCH __attribute__((address(0x31D)));
-[v _PWM5DCH `Vuc ~T0 @X0 0 e@797 ]
-"6647
-[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 6647: extern volatile unsigned char PWM5DCL __attribute__((address(0x31C)));
-[v _PWM5DCL `Vuc ~T0 @X0 0 e@796 ]
+"419 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 419:     struct {
+[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . INTEDG . PEIE GIE ]
+"418
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 418: typedef union {
+[u S30 `S31 1 ]
+[n S30 . . ]
+"426
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 426: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"1442
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 1442: extern volatile unsigned char TX1REG __attribute__((address(0x11A)));
+[v _TX1REG `Vuc ~T0 @X0 0 e@282 ]
+"1822
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 1822:     struct {
+[s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S102 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"1821
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 1821: typedef union {
+[u S101 `S102 1 ]
+[n S101 . . ]
+"1833
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 1833: extern volatile TX1STAbits_t TX1STAbits __attribute__((address(0x11E)));
+[v _TX1STAbits `VS101 ~T0 @X0 0 e@286 ]
+"1388
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 1388: extern volatile unsigned char RC1REG __attribute__((address(0x119)));
+[v _RC1REG `Vuc ~T0 @X0 0 e@281 ]
+"9155
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9155:     struct {
+[s S431 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S431 . SSP1IF BCL1IF SSP2IF BCL2IF TX1IF RC1IF TX2IF RC2IF ]
+"9154
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9154: typedef union {
+[u S430 `S431 1 ]
+[n S430 . . ]
+"9166
+[; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 9166: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x70F)));
+[v _PIR3bits `VS430 ~T0 @X0 0 e@1807 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
 "110 D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h
 [; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1046,47 +1078,179 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21398
 [; ;D:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15356.h: 21398: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"58 mcc_generated_files/pwm5.c
-[; ;mcc_generated_files/pwm5.c: 58:  void PWM5_Initialize(void)
-[v _PWM5_Initialize `(v ~T0 @X0 1 ef ]
-"59
-[; ;mcc_generated_files/pwm5.c: 59:  {
+"43 ./interrupt.h
+[; ;./interrupt.h: 43: uint8_t UARTBuffer[16];
+[v _UARTBuffer `uc ~T0 @X0 -> 16 `i e ]
+"44
+[; ;./interrupt.h: 44: uint8_t UARTBufferIndex = 0;
+[v _UARTBufferIndex `uc ~T0 @X0 1 e ]
+[i _UARTBufferIndex
+-> -> 0 `i `uc
+]
+"45
+[; ;./interrupt.h: 45: uint8_t UARTReceivedByte;
+[v _UARTReceivedByte `uc ~T0 @X0 1 e ]
+"46
+[; ;./interrupt.h: 46: uint8_t EnterKeyPressed = 0;
+[v _EnterKeyPressed `uc ~T0 @X0 1 e ]
+[i _EnterKeyPressed
+-> -> 0 `i `uc
+]
+"11 interrupt.c
+[; ;interrupt.c: 11: void Interrupt_Switch(uint8_t state)
+[v _Interrupt_Switch `(v ~T0 @X0 1 ef1`uc ]
+"12
+[; ;interrupt.c: 12: {
 {
-[e :U _PWM5_Initialize ]
+[e :U _Interrupt_Switch ]
+"11
+[; ;interrupt.c: 11: void Interrupt_Switch(uint8_t state)
+[v _state `uc ~T0 @X0 1 r1 ]
+"12
+[; ;interrupt.c: 12: {
 [f ]
-"62
-[; ;mcc_generated_files/pwm5.c: 62:     PWM5CON = 0x90;
-[e = _PWM5CON -> -> 144 `i `uc ]
-"65
-[; ;mcc_generated_files/pwm5.c: 65:     PWM5DCH = 0x00;
-[e = _PWM5DCH -> -> 0 `i `uc ]
-"68
-[; ;mcc_generated_files/pwm5.c: 68:     PWM5DCL = 0x00;
-[e = _PWM5DCL -> -> 0 `i `uc ]
-"70
-[; ;mcc_generated_files/pwm5.c: 70:  }
-[e :UE 980 ]
+"13
+[; ;interrupt.c: 13:     switch(state)
+[e $U 985  ]
+"14
+[; ;interrupt.c: 14:     {
+{
+"16
+[; ;interrupt.c: 16:         case 0:
+[e :U 986 ]
+"17
+[; ;interrupt.c: 17:         {
+{
+"18
+[; ;interrupt.c: 18:             INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"19
+[; ;interrupt.c: 19:             INTCONbits.PEIE = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"20
+[; ;interrupt.c: 20:             break;
+[e $U 984  ]
+"21
+[; ;interrupt.c: 21:         }
 }
-"72
-[; ;mcc_generated_files/pwm5.c: 72:  void PWM5_LoadDutyValue(uint16_t dutyValue)
-[v _PWM5_LoadDutyValue `(v ~T0 @X0 1 ef1`us ]
-"73
-[; ;mcc_generated_files/pwm5.c: 73:  {
+"22
+[; ;interrupt.c: 22:         case 1:
+[e :U 987 ]
+"23
+[; ;interrupt.c: 23:         {
 {
-[e :U _PWM5_LoadDutyValue ]
-"72
-[; ;mcc_generated_files/pwm5.c: 72:  void PWM5_LoadDutyValue(uint16_t dutyValue)
-[v _dutyValue `us ~T0 @X0 1 r1 ]
-"73
-[; ;mcc_generated_files/pwm5.c: 73:  {
+"24
+[; ;interrupt.c: 24:             INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+"25
+[; ;interrupt.c: 25:             INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"26
+[; ;interrupt.c: 26:             break;
+[e $U 984  ]
+"27
+[; ;interrupt.c: 27:         }
+}
+"28
+[; ;interrupt.c: 28:     }
+}
+[e $U 984  ]
+[e :U 985 ]
+[e [\ -> _state `i , $ -> 0 `i 986
+ , $ -> 1 `i 987
+ 984 ]
+[e :U 984 ]
+"29
+[; ;interrupt.c: 29: }
+[e :UE 983 ]
+}
+"36
+[; ;interrupt.c: 36: void echo(uint8_t byte)
+[v _echo `(v ~T0 @X0 1 ef1`uc ]
+"37
+[; ;interrupt.c: 37: {
+{
+[e :U _echo ]
+"36
+[; ;interrupt.c: 36: void echo(uint8_t byte)
+[v _byte `uc ~T0 @X0 1 r1 ]
+"37
+[; ;interrupt.c: 37: {
 [f ]
-"75
-[; ;mcc_generated_files/pwm5.c: 75:      PWM5DCH = (dutyValue & 0x03FC)>>2;
-[e = _PWM5DCH -> >> & -> _dutyValue `ui -> -> 1020 `i `ui -> 2 `i `uc ]
-"78
-[; ;mcc_generated_files/pwm5.c: 78:      PWM5DCL = (dutyValue & 0x0003)<<6;
-[e = _PWM5DCL -> << & -> _dutyValue `ui -> -> 3 `i `ui -> 6 `i `uc ]
-"79
-[; ;mcc_generated_files/pwm5.c: 79:  }
-[e :UE 981 ]
+"38
+[; ;interrupt.c: 38:     TX1REG = byte;
+[e = _TX1REG _byte ]
+"39
+[; ;interrupt.c: 39:     while(TX1STAbits.TRMT == 1);
+[e $U 989  ]
+[e :U 990 ]
+[e :U 989 ]
+[e $ == -> . . _TX1STAbits 0 1 `i -> 1 `i 990  ]
+[e :U 991 ]
+"40
+[; ;interrupt.c: 40: }
+[e :UE 988 ]
+}
+"41
+[; ;interrupt.c: 41: void UART_Rx_IntHandler(void)
+[v _UART_Rx_IntHandler `(v ~T0 @X0 1 ef ]
+"42
+[; ;interrupt.c: 42: {
+{
+[e :U _UART_Rx_IntHandler ]
+[f ]
+"43
+[; ;interrupt.c: 43:     UARTReceivedByte = RC1REG;
+[e = _UARTReceivedByte _RC1REG ]
+"49
+[; ;interrupt.c: 49:         UARTBuffer[UARTBufferIndex] = UARTReceivedByte;
+[e = *U + &U _UARTBuffer * -> _UARTBufferIndex `ux -> -> # *U &U _UARTBuffer `ui `ux _UARTReceivedByte ]
+"52
+[; ;interrupt.c: 52:         echo(UARTReceivedByte);
+[e ( _echo (1 _UARTReceivedByte ]
+"55
+[; ;interrupt.c: 55:         if(UARTBufferIndex < 16)
+[e $ ! < -> _UARTBufferIndex `i -> 16 `i 993  ]
+"56
+[; ;interrupt.c: 56:         {
+{
+"57
+[; ;interrupt.c: 57:             UARTBufferIndex++;
+[e ++ _UARTBufferIndex -> -> 1 `i `uc ]
+"58
+[; ;interrupt.c: 58:         }
+}
+[e :U 993 ]
+"86
+[; ;interrupt.c: 86:     PIR3bits.RC1IF = 0;
+[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
+"87
+[; ;interrupt.c: 87: }
+[e :UE 992 ]
+}
+[v $root$_Interrupt_Handler `(v ~T0 @X0 0 e ]
+"88
+[; ;interrupt.c: 88: void __attribute__((picinterrupt(("")))) Interrupt_Handler(void)
+[v _Interrupt_Handler `(v ~T1 @X0 1 ef ]
+"89
+[; ;interrupt.c: 89: {
+{
+[e :U _Interrupt_Handler ]
+[f ]
+"90
+[; ;interrupt.c: 90:     if(PIR3bits.RC1IF == 1)
+[e $ ! == -> . . _PIR3bits 0 5 `i -> 1 `i 995  ]
+"91
+[; ;interrupt.c: 91:     {
+{
+"92
+[; ;interrupt.c: 92:         UART_Rx_IntHandler();
+[e ( _UART_Rx_IntHandler ..  ]
+"93
+[; ;interrupt.c: 93:     }
+}
+[e :U 995 ]
+"94
+[; ;interrupt.c: 94: }
+[e :UE 994 ]
 }
