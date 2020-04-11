@@ -42,8 +42,8 @@ void Interrupt_Switch(uint8_t);
 #define UART_RX_SIZE 16
 uint8_t UARTBuffer[UART_RX_SIZE];
 uint8_t UARTBufferIndex = 0;
-uint8_t UARTReceivedByte;
-uint8_t EnterKeyPressed = 0;
+uint8_t UARTReceivedByte = 0;
+uint8_t transfer_done = 0;
 
 #endif	/* INTERRUPT_H */
 

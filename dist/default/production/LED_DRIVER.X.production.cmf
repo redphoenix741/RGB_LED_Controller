@@ -12,29 +12,36 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\LED_DRIVER.X.production.o
-cinit CODE 0 12 12 10 2
-text1 CODE 0 169 169 9 2
-text2 CODE 0 E3 E3 19 2
-text3 CODE 0 14D 14D E 2
-text4 CODE 0 189 189 6 2
-text5 CODE 0 18F 18F 6 2
-text6 CODE 0 195 195 6 2
-text7 CODE 0 17B 17B 8 2
-text8 CODE 0 92 92 33 2
-text9 CODE 0 15B 15B E 2
-text10 CODE 0 13E 13E F 2
-text11 CODE 0 FC FC 16 2
-text12 CODE 0 112 112 16 2
-text13 CODE 0 128 128 16 2
-text15 CODE 0 C5 C5 1E 2
-text16 CODE 0 172 172 9 2
-maintext CODE 0 22 22 70 2
-cstackCOMMON COMMON 1 70 70 8 1
+cinit CODE 0 12 12 E 2
+text1 CODE 0 31D 31D 18 2
+text2 CODE 0 27E 27E 2D 2
+text3 CODE 0 20 20 A9 2
+text4 CODE 0 2AB 2AB 21 2
+text5 CODE 0 335 335 18 2
+text6 CODE 0 2CC 2CC 1F 2
+text7 CODE 0 C9 C9 A5 2
+text8 CODE 0 2EB 2EB 19 2
+text9 CODE 0 39E 39E E 2
+text10 CODE 0 3C8 3C8 6 2
+text11 CODE 0 3CE 3CE 6 2
+text12 CODE 0 3D4 3D4 6 2
+text13 CODE 0 3BA 3BA 8 2
+text14 CODE 0 24A 24A 34 2
+text15 CODE 0 3AC 3AC E 2
+text16 CODE 0 38F 38F F 2
+text17 CODE 0 34D 34D 16 2
+text18 CODE 0 363 363 16 2
+text19 CODE 0 379 379 16 2
+text20 CODE 0 304 304 19 2
+text22 CODE 0 16E 16E 89 2
+maintext CODE 0 1F7 1F7 53 2
+cstackCOMMON COMMON 1 70 70 A 1
+cstackBANK0 BANK0 1 38 38 16 1
 intentry CODE 0 4 4 C 2
-bssBANK0 BANK0 1 20 20 13 1
-clrtext CODE 0 183 183 6 2
-bssCOMMON COMMON 1 78 78 4 1
-$C:\Users\A51900\AppData\Local\Temp\s2ino.o
+bssBANK0 BANK0 1 20 20 18 1
+clrtext CODE 0 3C2 3C2 6 2
+bssCOMMON COMMON 1 7A 7A 2 1
+$C:\Users\A51900\AppData\Local\Temp\s2ijk.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 10 10 2 2
 config CONFIG 0 8007 8007 5 2
@@ -44,7 +51,7 @@ config CONFIG 0 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 33-6F 1
+RAM 4E-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -70,7 +77,7 @@ RAM B20-B6F 1
 RAM BA0-BEF 1
 RAM C20-C6F 1
 RAM CA0-CBF 1
-BANK0 33-6F 1
+BANK0 4E-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -81,9 +88,9 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 19B-3FFF 2
+CONST 3DA-3FFF 2
 ENTRY 2-3 2
-ENTRY 19B-3FFF 2
+ENTRY 3DA-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -139,9 +146,9 @@ SFR60 1E00-1E6F 1
 SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
-STACK 2013-27EF 1
+STACK 202E-27EF 1
 CODE 2-3 2
-CODE 19B-3FFF 2
+CODE 3DA-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -171,9 +178,9 @@ BANK25 CA0-CBF 1
 BIGRAM 2000-27EF 1
 COMMON 7C-7D 1
 STRCODE 2-3 2
-STRCODE 19B-3FFF 2
+STRCODE 3DA-3FFF 2
 STRING 2-3 2
-STRING 19B-3FFF 2
+STRING 3DA-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -188,172 +195,247 @@ STRING 19B-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LED_DRIVER.X.production.o
-12 cinit CODE >6549:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-12 cinit CODE >6552:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-12 cinit CODE >6594:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-13 cinit CODE >6595:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-14 cinit CODE >6596:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-15 cinit CODE >6597:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-16 cinit CODE >6601:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-17 cinit CODE >6602:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-18 cinit CODE >6603:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-19 cinit CODE >6604:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-1A cinit CODE >6605:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-1B cinit CODE >6606:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-1E cinit CODE >6612:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-1E cinit CODE >6614:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-1F cinit CODE >6615:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-20 cinit CODE >6616:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-4 intentry CODE >88:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-6 intentry CODE >90:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-B intentry CODE >92:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-E intentry CODE >94:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-172 text16 CODE >36:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-173 text16 CODE >38:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-176 text16 CODE >39:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-17A text16 CODE >40:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-C5 text15 CODE >41:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-C5 text15 CODE >43:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-CA text15 CODE >49:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-D2 text15 CODE >52:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-D6 text15 CODE >55:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-DC text15 CODE >57:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-E0 text15 CODE >86:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-E2 text15 CODE >87:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
-128 text13 CODE >72:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-128 text13 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-133 text13 CODE >78:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-13D text13 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-112 text12 CODE >72:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-112 text12 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-11D text12 CODE >78:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-127 text12 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-FC text11 CODE >72:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-FC text11 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-107 text11 CODE >78:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-111 text11 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-13E text10 CODE >54:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-13E text10 CODE >59:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-141 text10 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-143 text10 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-145 text10 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-147 text10 CODE >71:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-149 text10 CODE >74:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-14B text10 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-14C text10 CODE >76:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
-15B text9 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-15B text9 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-15E text9 CODE >67:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-15F text9 CODE >69:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-160 text9 CODE >71:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-162 text9 CODE >73:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-163 text9 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-164 text9 CODE >77:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-164 text9 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-168 text9 CODE >80:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-92 text8 CODE >55:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-92 text8 CODE >60:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-94 text8 CODE >61:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-95 text8 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-97 text8 CODE >67:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-99 text8 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-9B text8 CODE >69:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-9D text8 CODE >74:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A0 text8 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A2 text8 CODE >76:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A4 text8 CODE >81:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A5 text8 CODE >82:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A6 text8 CODE >83:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A7 text8 CODE >84:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A8 text8 CODE >89:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-A9 text8 CODE >90:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-AA text8 CODE >91:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-AB text8 CODE >96:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-AD text8 CODE >97:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-AF text8 CODE >98:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-B1 text8 CODE >103:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-B3 text8 CODE >104:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-B5 text8 CODE >105:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-B7 text8 CODE >106:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-B9 text8 CODE >115:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-BB text8 CODE >116:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-BD text8 CODE >117:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-BF text8 CODE >118:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-C1 text8 CODE >119:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-C4 text8 CODE >120:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
-17B text7 CODE >82:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-17B text7 CODE >85:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-17D text7 CODE >87:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-17E text7 CODE >89:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-17F text7 CODE >91:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-180 text7 CODE >93:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-181 text7 CODE >95:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-182 text7 CODE >96:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-195 text6 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-195 text6 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-198 text6 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-199 text6 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-19A text6 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
-18F text5 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-18F text5 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-192 text5 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-193 text5 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-194 text5 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
-189 text4 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-189 text4 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-18C text4 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-18D text4 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-18E text4 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
-14D text3 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-14D text3 CODE >67:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-150 text3 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-151 text3 CODE >73:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-152 text3 CODE >76:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-154 text3 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-155 text3 CODE >82:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-157 text3 CODE >85:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-15A text3 CODE >86:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
-E3 text2 CODE >50:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-E3 text2 CODE >52:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-E6 text2 CODE >53:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-E9 text2 CODE >54:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-EC text2 CODE >55:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-EF text2 CODE >56:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-F2 text2 CODE >57:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-F5 text2 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-F8 text2 CODE >59:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-FB text2 CODE >60:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
-169 text1 CODE >59:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-169 text1 CODE >61:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-16E text1 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-16F text1 CODE >63:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-171 text1 CODE >64:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-22 maintext CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-22 maintext CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-25 maintext CODE >74:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-26 maintext CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-27 maintext CODE >81:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-2D maintext CODE >82:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-31 maintext CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-38 maintext CODE >89:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-3F maintext CODE >90:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-43 maintext CODE >91:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-44 maintext CODE >96:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-4C maintext CODE >103:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-54 maintext CODE >110:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-5F maintext CODE >111:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-6A maintext CODE >112:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-75 maintext CODE >113:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-76 maintext CODE >114:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-77 maintext CODE >116:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
-183 clrtext CODE >6583:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-183 clrtext CODE >6584:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-184 clrtext CODE >6585:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-184 clrtext CODE >6586:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-185 clrtext CODE >6587:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-186 clrtext CODE >6588:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-187 clrtext CODE >6589:C:\Users\A51900\AppData\Local\Temp\s2ino.s
-188 clrtext CODE >6590:C:\Users\A51900\AppData\Local\Temp\s2ino.s
+12 cinit CODE >6554:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+12 cinit CODE >6557:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+12 cinit CODE >6599:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+13 cinit CODE >6600:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+14 cinit CODE >6604:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+15 cinit CODE >6605:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+16 cinit CODE >6606:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+17 cinit CODE >6607:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+18 cinit CODE >6608:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+19 cinit CODE >6609:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+1C cinit CODE >6615:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+1C cinit CODE >6617:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+1D cinit CODE >6618:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+1E cinit CODE >6619:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+4 intentry CODE >112:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+6 intentry CODE >114:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+B intentry CODE >116:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+E intentry CODE >118:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+16E text22 CODE >37:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+16E text22 CODE >39:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+173 text22 CODE >41:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+174 text22 CODE >45:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+17A text22 CODE >47:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+17B text22 CODE >48:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+180 text22 CODE >54:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+187 text22 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+18D text22 CODE >64:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+191 text22 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+195 text22 CODE >66:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+196 text22 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+19D text22 CODE >71:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1AA text22 CODE >77:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1B0 text22 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1B4 text22 CODE >80:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1B8 text22 CODE >81:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1B9 text22 CODE >85:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1C4 text22 CODE >92:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1CA text22 CODE >94:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1CB text22 CODE >95:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1CC text22 CODE >96:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1CE text22 CODE >97:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1CF text22 CODE >101:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1DA text22 CODE >109:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1F4 text22 CODE >110:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+1F6 text22 CODE >111:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+304 text20 CODE >11:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+305 text20 CODE >13:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+306 text20 CODE >16:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+306 text20 CODE >18:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+307 text20 CODE >19:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+308 text20 CODE >20:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+309 text20 CODE >22:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+309 text20 CODE >24:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+30A text20 CODE >25:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+30B text20 CODE >26:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+30C text20 CODE >28:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+31C text20 CODE >29:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\interrupt.c
+379 text19 CODE >72:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+379 text19 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+384 text19 CODE >78:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+38E text19 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+363 text18 CODE >72:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+363 text18 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+36E text18 CODE >78:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+378 text18 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+34D text17 CODE >72:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+34D text17 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+358 text17 CODE >78:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+362 text17 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+38F text16 CODE >54:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+38F text16 CODE >59:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+392 text16 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+394 text16 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+396 text16 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+398 text16 CODE >71:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+39A text16 CODE >74:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+39C text16 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+39D text16 CODE >76:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/eusart1.c
+3AC text15 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3AC text15 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3AF text15 CODE >67:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3B0 text15 CODE >69:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3B1 text15 CODE >71:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3B3 text15 CODE >73:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3B4 text15 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3B5 text15 CODE >77:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3B5 text15 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3B9 text15 CODE >80:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+24A text14 CODE >55:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+24A text14 CODE >60:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+24C text14 CODE >61:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+24D text14 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+24F text14 CODE >67:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+251 text14 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+253 text14 CODE >69:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+255 text14 CODE >74:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+258 text14 CODE >75:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+25A text14 CODE >76:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+25C text14 CODE >81:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+25D text14 CODE >82:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+25E text14 CODE >83:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+25F text14 CODE >84:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+260 text14 CODE >89:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+261 text14 CODE >90:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+262 text14 CODE >91:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+264 text14 CODE >96:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+266 text14 CODE >97:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+268 text14 CODE >98:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+26A text14 CODE >103:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+26C text14 CODE >104:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+26E text14 CODE >105:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+270 text14 CODE >106:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+272 text14 CODE >115:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+274 text14 CODE >116:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+276 text14 CODE >117:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+278 text14 CODE >118:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+27A text14 CODE >119:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+27D text14 CODE >120:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pin_manager.c
+3BA text13 CODE >82:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3BA text13 CODE >85:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3BC text13 CODE >87:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3BD text13 CODE >89:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3BE text13 CODE >91:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3BF text13 CODE >93:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3C0 text13 CODE >95:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3C1 text13 CODE >96:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+3D4 text12 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+3D4 text12 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+3D7 text12 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+3D8 text12 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+3D9 text12 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm3.c
+3CE text11 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+3CE text11 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+3D1 text11 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+3D2 text11 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+3D3 text11 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm4.c
+3C8 text10 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+3C8 text10 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+3CB text10 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+3CC text10 CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+3CD text10 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/pwm5.c
+39E text9 CODE >62:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+39E text9 CODE >67:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+3A1 text9 CODE >70:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+3A2 text9 CODE >73:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+3A3 text9 CODE >76:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+3A5 text9 CODE >79:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+3A6 text9 CODE >82:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+3A8 text9 CODE >85:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+3AB text9 CODE >86:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/tmr2.c
+2EB text8 CODE >50:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+2EB text8 CODE >52:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+2EE text8 CODE >53:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+2F1 text8 CODE >54:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+2F4 text8 CODE >55:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+2F7 text8 CODE >56:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+2FA text8 CODE >57:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+2FD text8 CODE >58:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+300 text8 CODE >59:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+303 text8 CODE >60:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\mcc_generated_files/mcc.c
+C9 text7 CODE >4:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+CB text7 CODE >6:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+CF text7 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+D6 text7 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+DD text7 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+E8 text7 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+F2 text7 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+F9 text7 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+101 text7 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+10C text7 CODE >20:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+117 text7 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+121 text7 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+129 text7 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+134 text7 CODE >24:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+13E text7 CODE >31:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+14B text7 CODE >32:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+14F text7 CODE >33:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+153 text7 CODE >34:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+157 text7 CODE >86:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+16D text7 CODE >90:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+2CC text6 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2CC text6 CODE >43:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2CE text6 CODE >45:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2D2 text6 CODE >46:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2D6 text6 CODE >47:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2DB text6 CODE >48:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2E0 text6 CODE >49:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2E6 text6 CODE >52:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2EA text6 CODE >53:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+335 text5 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isdigit.c
+335 text5 CODE >7:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isdigit.c
+34C text5 CODE >8:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isdigit.c
+2AB text4 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isspace.c
+2AB text4 CODE >7:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isspace.c
+2CB text4 CODE >8:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isspace.c
+20 text3 CODE >4:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+22 text3 CODE >6:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+26 text3 CODE >7:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+58 text3 CODE >9:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+5C text3 CODE >10:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+60 text3 CODE >11:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+74 text3 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+91 text3 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+B2 text3 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+C8 text3 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atoi.c
+27E text2 CODE >4:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+27F text2 CODE >11:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+283 text2 CODE >12:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+287 text2 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+288 text2 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+293 text2 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+29E text2 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+29E text2 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2AA text2 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+31D text1 CODE >60:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+31F text1 CODE >63:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+32B text1 CODE >64:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+334 text1 CODE >65:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+1F7 maintext CODE >66:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+1F7 maintext CODE >68:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+1F7 maintext CODE >71:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+1FA maintext CODE >74:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+1FE maintext CODE >78:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+204 maintext CODE >81:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+206 maintext CODE >84:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+208 maintext CODE >87:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+211 maintext CODE >88:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+21A maintext CODE >89:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+223 maintext CODE >92:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+22A maintext CODE >93:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+232 maintext CODE >94:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+23A maintext CODE >97:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+245 maintext CODE >100:D:\Onedrive\OneDrive - Microchip Technology, Inc\LED_DRIVER.X\main.c
+3C2 clrtext CODE >6588:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+3C2 clrtext CODE >6589:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+3C3 clrtext CODE >6590:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+3C3 clrtext CODE >6591:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+3C4 clrtext CODE >6592:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+3C5 clrtext CODE >6593:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+3C6 clrtext CODE >6594:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
+3C7 clrtext CODE >6595:C:\Users\A51900\AppData\Local\Temp\s2ijk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -380,10 +462,10 @@ _PWM4DCL 318 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _PWM5CON 31E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _PWM5DCH 31D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _PWM5DCL 31C 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_EUSART1_Initialize 27C 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
+_EUSART1_Initialize 71E 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PMD_Initialize 2F6 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+_PMD_Initialize 774 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 __CFG_WDTCCS$SC 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _LATA 18 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
@@ -402,75 +484,89 @@ _WPUA 1F39 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _WPUB 1F44 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _WPUC 1F4F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _WPUE 1F65 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\A51900\AppData\Local\Temp\s2ino.o
-_echo 2E4 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
-_main 44 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+_atoi 40 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+_main 3EE 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-start 20 0 CODE 0 init C:\Users\A51900\AppData\Local\Temp\s2ino.o
-__end_of_PWM3_LoadDutyValue 27C 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
-__size_of_echo 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+start 20 0 CODE 0 init C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+__end_of_PWM3_LoadDutyValue 71E 0 CODE 0 text19 dist/default/production\LED_DRIVER.X.production.o
+__size_of_atoi 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
-_isDataAvailable 2D2 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
+?___wmul 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 _Interrupt_Handler 8 0 CODE 0 intentry dist/default/production\LED_DRIVER.X.production.o
 __size_of_PWM5_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-_TMR2_Initialize 29A 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+_TMR2_Initialize 73C 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ino.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ino.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ino.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ino.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ino.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ino.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\A51900\AppData\Local\Temp\s2ijk.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 PWM3_LoadDutyValue@dutyValue 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+__size_of_string_to_decimal 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __size_of_PWM4_LoadDutyValue 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PWM3_LoadDutyValue 250 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
+_PWM3_LoadDutyValue 6F2 0 CODE 0 text19 dist/default/production\LED_DRIVER.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-__end_of_PMD_Initialize 306 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+__end_of_PMD_Initialize 784 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
+_Interrupt_Switch 608 0 CODE 0 text20 dist/default/production\LED_DRIVER.X.production.o
+___wmul@multiplicand 74 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 _ANSELA 1F38 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _ANSELB 1F43 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _ANSELC 1F4E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of___wmul 5D6 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
 _UARTBufferIndex 7B 0 COMMON 1 bssCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of_UART_Rx_IntHandler 1C6 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
+__end_of_UART_Rx_IntHandler 3EE 0 CODE 0 text22 dist/default/production\LED_DRIVER.X.production.o
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_isdigit 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_isspace 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _INLVLA 1F3C 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _INLVLB 1F47 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _INLVLC 1F52 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _INLVLE 1F68 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__size_of_isDataAvailable 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-___stackhi 27EF 0 ABS 0 - C:\Users\A51900\AppData\Local\Temp\s2ino.o
-___stacklo 2013 0 ABS 0 - C:\Users\A51900\AppData\Local\Temp\s2ino.o
+___stackhi 27EF 0 ABS 0 - C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+___stacklo 202E 0 ABS 0 - C:\Users\A51900\AppData\Local\Temp\s2ijk.o
 __CFG_SAFEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+string_to_decimal@temp_buffer 49 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 __size_of_TMR2_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PIN_MANAGER_Initialize 124 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
+memcpy@tmp 76 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+_PIN_MANAGER_Initialize 494 0 CODE 0 text14 dist/default/production\LED_DRIVER.X.production.o
 start_initialization 24 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
 _ODCONA 1F3A 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _ODCONB 1F45 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _ODCONC 1F50 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _OSCFRQ 893 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_UART_Rx_IntHandler 18A 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
+_UART_Rx_IntHandler 2DC 0 CODE 0 text22 dist/default/production\LED_DRIVER.X.production.o
 __CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__end_of_PWM5_LoadDutyValue 224 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
+__end_of_PWM5_LoadDutyValue 6C6 0 CODE 0 text17 dist/default/production\LED_DRIVER.X.production.o
+__end_of_Interrupt_Switch 63A 0 CODE 0 text20 dist/default/production\LED_DRIVER.X.production.o
 _RC0PPS 1F20 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _RC1PPS 1F21 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _RC1REG 119 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _RC1STA 11D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _RC2PPS 1F22 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _RC6PPS 1F26 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__end_of_SYSTEM_Initialize 1F8 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
-clear_ram0 306 0 CODE 0 clrtext dist/default/production\LED_DRIVER.X.production.o
+__end_of_memcpy 556 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
+__end_of_memset 2DC 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+__end_of_SYSTEM_Initialize 608 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
+clear_ram0 784 0 CODE 0 clrtext dist/default/production\LED_DRIVER.X.production.o
+__pcstackBANK0 38 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 _T2CLKCON 290 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_Interrupt_Switch 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__end_of_string_to_decimal 66A 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
 _TX1REG 11A 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _TX1STA 11E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_RSTOSC$HFINTPLL 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\A51900\AppData\Local\Temp\s2ino.o
-__end_of_PWM3_Initialize 336 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+__end_of_PWM3_Initialize 7B4 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
+Interrupt_Switch@state 74 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -481,7 +577,7 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 44 0 CODE 0 cinit -
+__Hcinit 40 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
@@ -596,7 +692,7 @@ __Hbank63 0 0 BANK63 1 bank63 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 _BAUD1CON 11F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PWM5_LoadDutyValue 1F8 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
+_PWM5_LoadDutyValue 69A 0 CODE 0 text17 dist/default/production\LED_DRIVER.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10018 0 CONFIG 0 config -
 _T2HLTbits 28F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
@@ -610,8 +706,10 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
+__end_of_isdigit 69A 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
 __Lcinit 24 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
+__end_of_isspace 598 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -667,6 +765,8 @@ __Lsfr61 0 0 ABS 0 sfr61 -
 __Lsfr62 0 0 ABS 0 sfr62 -
 __Lsfr63 0 0 ABS 0 sfr63 -
 __Lstack 0 0 STACK 2 stack -
+memcpy@d1 77 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+memcpy@s1 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -696,36 +796,59 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
+memcpy@d 78 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+memcpy@n 73 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+memcpy@s 79 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+memset@dest 38 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+memset@c 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+memset@k 39 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+memset@n 74 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+memset@s 3B 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+___wmul 598 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
 __CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 int$flags 7E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+isspace@c 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 PWM5_LoadDutyValue@dutyValue 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 _PR2 28D 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __S0 800C 0 ABS 0 - -
 __S1 7C 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-_rgb 30 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_rgb 20 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
 __size_of_PWM3_LoadDutyValue 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _T2RSTbits 291 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PWM3_Initialize 32A 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
+_PWM3_Initialize 7A8 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
 __CFG_BBEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_SYSTEM_Initialize 1C6 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
+_SYSTEM_Initialize 5D6 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+_string_to_decimal 63A 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\A51900\AppData\Local\Temp\s2ino.o
-echo@byte 70 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\A51900\AppData\Local\Temp\s2ijk.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__end_of_PWM4_Initialize 32A 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
+__end_of_PWM4_Initialize 7A8 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
 __size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _PIE3bits 719 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__ptext10 27C 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
-__ptext11 1F8 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
-__ptext12 224 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
-__ptext13 250 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
-__ptext15 18A 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
-__ptext16 2E4 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
-__end_of_PIN_MANAGER_Initialize 18A 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
+_memcpy 4FC 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
+_memset 192 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+__ptext10 790 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
+__ptext11 79C 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
+__ptext12 7A8 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
+__ptext13 774 0 CODE 0 text13 dist/default/production\LED_DRIVER.X.production.o
+__ptext14 494 0 CODE 0 text14 dist/default/production\LED_DRIVER.X.production.o
+__ptext15 758 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
+__ptext16 71E 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
+__ptext17 69A 0 CODE 0 text17 dist/default/production\LED_DRIVER.X.production.o
+__ptext18 6C6 0 CODE 0 text18 dist/default/production\LED_DRIVER.X.production.o
+__ptext19 6F2 0 CODE 0 text19 dist/default/production\LED_DRIVER.X.production.o
+__ptext20 608 0 CODE 0 text20 dist/default/production\LED_DRIVER.X.production.o
+__ptext22 2DC 0 CODE 0 text22 dist/default/production\LED_DRIVER.X.production.o
+_atoi$849 3E 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+_atoi$850 42 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+_atoi$851 40 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+__end_of_PIN_MANAGER_Initialize 4FC 0 CODE 0 text14 dist/default/production\LED_DRIVER.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -780,14 +903,16 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext 44 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+__pmaintext 3EE 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_BBSIZE$BB512 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+?_atoi 78 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+___wmul@multiplier 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 _UARTReceivedByte 7A 0 COMMON 1 bssCOMMON dist/default/production\LED_DRIVER.X.production.o
 __CFG_WRTAPP$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __size_of_Interrupt_Handler 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
@@ -800,11 +925,14 @@ __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__end_of_PWM4_LoadDutyValue 250 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
-__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\LED_DRIVER.X.production.o
+__end_of_PWM4_LoadDutyValue 6F2 0 CODE 0 text18 dist/default/production\LED_DRIVER.X.production.o
+__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\LED_DRIVER.X.production.o
 __CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_memcpy 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+__size_of_memset 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __size_of_PWM3_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PWM4_Initialize 31E 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
+_PWM4_Initialize 79C 0 CODE 0 text11 dist/default/production\LED_DRIVER.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR3bits 70F 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _PIR4bits 710 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lend_init 20 0 CODE 0 end_init -
@@ -812,35 +940,39 @@ __CFG_LVP$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-end_of_initialization 3C 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
+end_of_initialization 38 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
 __Hintentry 20 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_TX1STAbits 11E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 2D2 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
-__ptext2 1C6 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
-__ptext3 29A 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
-__ptext4 312 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
-__ptext5 31E 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
-__ptext6 32A 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
-__ptext7 2F6 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
-__ptext8 124 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
-__ptext9 2B6 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
+__ptext1 63A 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
+__ptext2 4FC 0 CODE 0 text2 dist/default/production\LED_DRIVER.X.production.o
+__ptext3 40 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+__ptext4 556 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
+__ptext5 66A 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
+__ptext6 598 0 CODE 0 text6 dist/default/production\LED_DRIVER.X.production.o
+__ptext7 192 0 CODE 0 text7 dist/default/production\LED_DRIVER.X.production.o
+__ptext8 5D6 0 CODE 0 text8 dist/default/production\LED_DRIVER.X.production.o
+__ptext9 73C 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
 _RX1DTPPS 1ECB 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__end_of_PWM5_Initialize 31E 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
+string_to_decimal@buffer 4D 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+__end_of_PWM5_Initialize 79C 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
 __size_of_PWM5_LoadDutyValue 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PWM4_LoadDutyValue 224 0 CODE 0 text12 dist/default/production\LED_DRIVER.X.production.o
+_PWM4_LoadDutyValue 6C6 0 CODE 0 text18 dist/default/production\LED_DRIVER.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_isdigit 66A 0 CODE 0 text5 dist/default/production\LED_DRIVER.X.production.o
+_receive_state 26 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_isspace 556 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
 PWM4_LoadDutyValue@dutyValue 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+_isspace$867 76 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 _SLRCONA 1F3B 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _SLRCONB 1F46 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _SLRCONC 1F51 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__end_of__initialization 3C 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
+__end_of__initialization 38 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
@@ -849,12 +981,14 @@ _SP1BRGL 11B 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __Hend_init 24 0 CODE 0 end_init -
-_UARTBuffer 20 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+_UARTBuffer 28 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
 __size_of_PWM4_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-_PWM5_Initialize 312 0 CODE 0 text4 dist/default/production\LED_DRIVER.X.production.o
+_PWM5_Initialize 790 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
 __end_of_Interrupt_Handler 20 0 CODE 0 intentry dist/default/production\LED_DRIVER.X.production.o
-__end_of_echo 2F6 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
-__end_of_main 124 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+__end_of_atoi 192 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+__end_of_main 494 0 CODE 0 maintext dist/default/production\LED_DRIVER.X.production.o
+?_string_to_decimal 46 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+isdigit@c 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __CFG_WRTSAF$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _OSCEN 891 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _T2CON 28E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
@@ -866,19 +1000,24 @@ _TRISB 13 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 _TRISC 14 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_state 78 0 COMMON 1 bssCOMMON dist/default/production\LED_DRIVER.X.production.o
+atoi@neg 3C 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
+?_isdigit 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\LED_DRIVER.X.production.o
-__end_of_EUSART1_Initialize 29A 0 CODE 0 text10 dist/default/production\LED_DRIVER.X.production.o
-__end_of_OSCILLATOR_Initialize 2D2 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
+?_isspace 72 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+__end_of_EUSART1_Initialize 73C 0 CODE 0 text16 dist/default/production\LED_DRIVER.X.production.o
+__end_of_OSCILLATOR_Initialize 774 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
+atoi@n 43 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
+atoi@s 45 0 BANK0 1 cstackBANK0 dist/default/production\LED_DRIVER.X.production.o
 __CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __initialization 24 0 CODE 0 cinit dist/default/production\LED_DRIVER.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
 _T2CONbits 28E 0 ABS 0 - dist/default/production\LED_DRIVER.X.production.o
-__end_of_isDataAvailable 2E4 0 CODE 0 text1 dist/default/production\LED_DRIVER.X.production.o
-_OSCILLATOR_Initialize 2B6 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
-__end_of_TMR2_Initialize 2B6 0 CODE 0 text3 dist/default/production\LED_DRIVER.X.production.o
+_transfer_done 27 0 BANK0 1 bssBANK0 dist/default/production\LED_DRIVER.X.production.o
+___wmul@product 76 0 COMMON 1 cstackCOMMON dist/default/production\LED_DRIVER.X.production.o
+_OSCILLATOR_Initialize 758 0 CODE 0 text15 dist/default/production\LED_DRIVER.X.production.o
+__end_of_TMR2_Initialize 758 0 CODE 0 text9 dist/default/production\LED_DRIVER.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -905,9 +1044,9 @@ __end_of_TMR2_Initialize 2B6 0 CODE 0 text3 dist/default/production\LED_DRIVER.X
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cstackCOMMON 1 70 70 C 1
-intentry 0 4 8 197 2
+intentry 0 4 8 3D6 2
 reset_vec 0 0 0 2 2
-bssBANK0 1 20 20 13 1
+bssBANK0 1 20 20 2E 1
 config 0 8007 1000E 5 2
 # OTES Section
 # This section contains data of all the note-psects.  The beginning of the section

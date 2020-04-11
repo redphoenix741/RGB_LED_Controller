@@ -54,8 +54,8 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     PWM4_Initialize();
     PWM3_Initialize();
-    PWM5_Initialize();
     TMR2_Initialize();
+    PWM5_Initialize();
     EUSART1_Initialize();
 }
 

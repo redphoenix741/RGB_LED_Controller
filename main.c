@@ -43,76 +43,61 @@
 
 #include "mcc_generated_files/mcc.h"
 #include "interrupt.h"
+#include <string.h>
 
 /* User - Define */
 struct
 {
-    uint8_t red;
-    uint8_t grn;
-    uint8_t blu;
+    uint16_t red;
+    uint16_t grn;
+    uint16_t blu;
 } rgb;
 
-uint8_t state = 0;
+
 /*
                          Main application
  */
-uint8_t isDataAvailable(void)
+uint16_t string_to_decimal(uint8_t *buffer)
 {
-    while(PIR3bits.RC1IF != 1); //Wait for Received
-    PIR3bits.RC1IF = 0;
-    return RC1REG;
+    char temp_buffer[4];
+    memcpy(temp_buffer,buffer,4);
+    return atoi(temp_buffer);
 }
 void main(void)
 {
-    
+    uint8_t state = 0;
     
     // initialize the device
     SYSTEM_Initialize();
+    
+    //Turn On Interrupt
+    Interrupt_Switch(1);
 
     while (1)
     {   
-        UARTReceivedByte = 0;
-        switch(state)
+        if(transfer_done == 1)
         {
-            case 0:
-            {
-                while(UARTReceivedByte != '.') //Wait until period is received 
-                {
-                    UARTReceivedByte = isDataAvailable();
-                    state++;
-                }
-                break;
-            }
-            case 1:
-            {
-                //Red
-                rgb.red = isDataAvailable();
-                state++;
-                break;
-            }
-            case 2:
-            {
-                //Green
-                rgb.grn = isDataAvailable();
-                state++;
-                break;
-            }
-            case 3:
-            {
-                //Blue
-                rgb.blu = isDataAvailable();
-                state++;
-                break;
-            }
-            case 4:
-            {
-                //Set PWM output to rgb
-                PWM3_LoadDutyValue(rgb.red);
-                PWM4_LoadDutyValue(rgb.grn);
-                PWM5_LoadDutyValue(rgb.blu);
-                state = 0;
-                break;
-            }
+            //Disable UART Interrupt
+            PIE3bits.RC1IE = 0;
+            
+            //Reset Flag
+            transfer_done = 0;
+            
+            //Parse Buffer
+            rgb.red = string_to_decimal(&UARTBuffer[0]);
+            rgb.grn = string_to_decimal(&UARTBuffer[4]);
+            rgb.blu = string_to_decimal(&UARTBuffer[8]);
+            
+            //Set PWM output to rgb
+            PWM3_LoadDutyValue(rgb.red);
+            PWM4_LoadDutyValue(rgb.grn);
+            PWM5_LoadDutyValue(rgb.blu);
+            
+            //Clear Buffers
+            memset(UARTBuffer,0,16);
+            
+            //Enable UART Interrupt
+            PIE3bits.RC1IE = 1;
         }
     }
 }

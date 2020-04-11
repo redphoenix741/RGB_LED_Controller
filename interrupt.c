@@ -32,57 +32,81 @@ void Interrupt_Switch(uint8_t state)
 uint8_t UARTBuffer[UART_RX_SIZE];
 uint8_t UARTBufferIndex = 0;
 uint8_t UARTReceivedByte;
-*/
-void echo(uint8_t byte)
-{
-    TX1REG = byte;
-    while(TX1STAbits.TRMT == 1);
-}
+ */
+volatile uint8_t receive_state = 0;
 void UART_Rx_IntHandler(void)
 {
     UARTReceivedByte = RC1REG;
     
-    //Filter Receive
-//    if(isxdigit(UARTReceivedByte))
-//    {
-        //Store then
-        UARTBuffer[UARTBufferIndex] = UARTReceivedByte;
-        
-        //Echo
-        echo(UARTReceivedByte);
-        
-        //Increment Index
-        if(UARTBufferIndex < UART_RX_SIZE)
+    switch(receive_state)
+    {
+        case 0:
         {
-            UARTBufferIndex++;
+            if(UARTReceivedByte == 's') 
+            {
+                UARTBufferIndex = 0;
+                receive_state++;
+            }
+            break;
         }
-//    }
-//    //isEnter
-//    else if(UARTReceivedByte == 0xD)
-//    {
-//        //Reset Index
-//        UARTBufferIndex = 0;
-//        EnterKeyPressed = 1;
-//        
-//        //Echo
-//        echo(UARTReceivedByte);
-//        echo((uint8_t)'\n');
-//    }
-//    //isBackspace
-//    else if(UARTReceivedByte == 0x7F)
-//    {
-//        //Check if zero
-//        if(UARTBufferIndex != 0)
-//        {
-//            UARTBufferIndex--;
-//        }
-//        //Delete
-//        UARTBuffer[UARTBufferIndex] = 0;
-//       
-//        //Echo
-//        echo(UARTReceivedByte);
-//    }
-
+        case 1:
+        {
+            if(UARTReceivedByte == '.')
+            {
+                receive_state++;
+            }
+            break;
+        }
+        case 2:
+        {
+            if(UARTReceivedByte == '.')
+            {
+                receive_state++;
+                UARTBufferIndex = 4;
+            }
+            else
+            {
+                //Save to Red
+                if(UARTBufferIndex >= 4) UARTBufferIndex = 0;
+                UARTBuffer[UARTBufferIndex++] = UARTReceivedByte;
+            }
+            break;
+        }
+        case 3:
+        {
+            if(UARTReceivedByte == '.')
+            {
+                receive_state++;
+                UARTBufferIndex = 8;
+            }
+            else
+            {
+                //Save to Green
+                if(UARTBufferIndex >= 8) UARTBufferIndex = 4;
+                UARTBuffer[UARTBufferIndex++] = UARTReceivedByte;
+            }
+            break;
+        }
+        case 4:
+        {
+            if(UARTReceivedByte == '.')
+            {
+                receive_state = 0;
+                UARTBufferIndex = 0;
+                transfer_done = 1;
+            }
+            else
+            {
+                //Save to Blue
+                if(UARTBufferIndex >= 12) UARTBufferIndex = 8;
+                UARTBuffer[UARTBufferIndex++] = UARTReceivedByte;
+            }
+            break;
+        }
+        default:
+            break;
+            
+    }
     PIR3bits.RC1IF = 0;
 }
 void __interrupt() Interrupt_Handler(void)
