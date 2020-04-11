@@ -15,3 +15,9 @@ Value enclosed with '' is a character
 ### Python GUI
 Sends the value of R,G,B in string to UART COM6 (hard-coded for now; will customized later)
 
+Libraries used:
+
+tkinter
+
+tkcolorpicker "pip install tkcolorpicker"
+
