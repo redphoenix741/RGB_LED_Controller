@@ -12933,80 +12933,121 @@ void Interrupt_Switch(uint8_t);
 
 uint8_t UARTBuffer[16];
 uint8_t UARTBufferIndex = 0;
-uint8_t UARTReceivedByte;
-uint8_t EnterKeyPressed = 0;
+uint8_t UARTReceivedByte = 0;
+uint8_t transfer_done = 0;
 # 45 "main.c" 2
+
+# 1 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
+# 25 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+# 1 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 2 3
+
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 46 "main.c" 2
 
 
 
 struct
 {
-    uint8_t red;
-    uint8_t grn;
-    uint8_t blu;
+    uint16_t red;
+    uint16_t grn;
+    uint16_t blu;
 } rgb;
 
-uint8_t state = 0;
 
 
 
-uint8_t isDataAvailable(void)
+
+uint16_t string_to_decimal(uint8_t *buffer)
 {
-    while(PIR3bits.RC1IF != 1);
-    PIR3bits.RC1IF = 0;
-    return RC1REG;
+    char temp_buffer[4];
+    memcpy(temp_buffer,buffer,4);
+    return atoi(temp_buffer);
 }
 void main(void)
 {
-
+    uint8_t state = 0;
 
 
     SYSTEM_Initialize();
 
+
+    Interrupt_Switch(1);
+
     while (1)
     {
-        UARTReceivedByte = 0;
-        switch(state)
+        if(transfer_done == 1)
         {
-            case 0:
-            {
-                while(UARTReceivedByte != '.')
-                {
-                    UARTReceivedByte = isDataAvailable();
-                    state++;
-                }
-                break;
-            }
-            case 1:
-            {
 
-                rgb.red = isDataAvailable();
-                state++;
-                break;
-            }
-            case 2:
-            {
+            PIE3bits.RC1IE = 0;
 
-                rgb.grn = isDataAvailable();
-                state++;
-                break;
-            }
-            case 3:
-            {
 
-                rgb.blu = isDataAvailable();
-                state++;
-                break;
-            }
-            case 4:
-            {
+            transfer_done = 0;
 
-                PWM3_LoadDutyValue(rgb.red);
-                PWM4_LoadDutyValue(rgb.grn);
-                PWM5_LoadDutyValue(rgb.blu);
-                state = 0;
-                break;
-            }
+
+            rgb.red = string_to_decimal(&UARTBuffer[0]);
+            rgb.grn = string_to_decimal(&UARTBuffer[4]);
+            rgb.blu = string_to_decimal(&UARTBuffer[8]);
+
+
+            PWM3_LoadDutyValue(rgb.red);
+            PWM4_LoadDutyValue(rgb.grn);
+            PWM5_LoadDutyValue(rgb.blu);
+
+
+            memset(UARTBuffer,0,16);
+
+
+            PIE3bits.RC1IE = 1;
         }
     }
 }
